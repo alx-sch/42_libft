@@ -6,7 +6,7 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 11:55:49 by aschenk           #+#    #+#             */
-/*   Updated: 2023/11/13 13:16:22 by aschenk          ###   ########.fr       */
+/*   Updated: 2023/11/13 17:59:28 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,13 @@
 
 # include <unistd.h>
 # include <stdlib.h>
+# include <stddef.h>
 
 /*
 ** Part 1
 */
 
-	// ft_toupper
+int		ft_toupper(int c);
 	// ft_isalpha
 	// ft_isdigit
 	// ft_tolower
@@ -29,8 +30,8 @@
 	// ft_isprint
 	// ft_strchr
 	// ft_strrchr
-int	ft_strlen(char *str);
-	// ft_strncmp
+size_t	ft_strlen(const char *s);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
 	// ft_memset
 	// ft_bzero
 	// ft_memchr
@@ -41,7 +42,6 @@ int	ft_strlen(char *str);
 	// ft_strlcpy
 	// ft_strlcat
 	// ft_atoi
-
 
 // malloc()
 

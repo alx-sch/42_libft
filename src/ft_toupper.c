@@ -1,31 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/13 13:17:00 by aschenk           #+#    #+#             */
-/*   Updated: 2023/11/13 17:55:42 by aschenk          ###   ########.fr       */
+/*   Created: 2023/11/13 17:31:45 by aschenk           #+#    #+#             */
+/*   Updated: 2023/11/13 17:54:35 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/libft.h"
-
-size_t	ft_strlen(const char *s)
+int	ft_toupper(int c)
 {
-	size_t	i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
+	if (c >= 'a' && c <= 'z')
+		c -= 32;
+	return (c);
 }
 
 /*
 #include <stdio.h>
+
 int	main(void)
 {
-	printf("length of 'bananapie!': %zu\n", ft_strlen("bananapie!"));
+	printf("%c\n", ft_toupper('e'));
 }
 */
