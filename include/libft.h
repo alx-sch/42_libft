@@ -6,7 +6,7 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 11:55:49 by aschenk           #+#    #+#             */
-/*   Updated: 2023/11/13 17:59:28 by aschenk          ###   ########.fr       */
+/*   Updated: 2023/11/14 16:04:52 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,16 @@
 
 # include <unistd.h>
 # include <stdlib.h>
-# include <stddef.h>
+# include <string.h>
 
 /*
 ** Part 1
 */
 
 int		ft_toupper(int c);
+int		ft_tolower(int c);
 	// ft_isalpha
 	// ft_isdigit
-	// ft_tolower
 	// ft_isalnum
 	// ft_isascii
 	// ft_isprint
