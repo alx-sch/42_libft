@@ -6,7 +6,7 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 12:45:37 by aschenk           #+#    #+#             */
-/*   Updated: 2023/11/15 13:02:19 by aschenk          ###   ########.fr       */
+/*   Updated: 2023/11/15 18:35:40 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ int	main(void)
 		printf("Test variable '%c' is an alphabetic character.\n", test);
 	else
 		printf("Test variable '%c' is NOT an alphabetic character.\n", test);
+
 	return (0);
 }
 */

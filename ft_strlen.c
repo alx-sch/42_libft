@@ -6,7 +6,7 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 13:17:00 by aschenk           #+#    #+#             */
-/*   Updated: 2023/11/15 12:40:54 by aschenk          ###   ########.fr       */
+/*   Updated: 2023/11/15 18:34:59 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,7 @@ size_t	ft_strlen(const char *s)
 int	main(void)
 {
 	printf("length of 'bananapie!': %zu\n", ft_strlen("bananapie!"));
+
+	return (0);
 }
 */

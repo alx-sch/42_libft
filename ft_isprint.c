@@ -6,7 +6,7 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 13:12:56 by aschenk           #+#    #+#             */
-/*   Updated: 2023/11/15 13:19:36 by aschenk          ###   ########.fr       */
+/*   Updated: 2023/11/15 18:35:28 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ int	main(void)
 		printf("Test variable '%c' is a printable character.\n", test);
 	else
 		printf("Test variable '%c' is NOT a printable character.\n", test);
+
 	return (0);
 }
 */

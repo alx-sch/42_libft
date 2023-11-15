@@ -6,7 +6,7 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 13:03:15 by aschenk           #+#    #+#             */
-/*   Updated: 2023/11/15 13:05:58 by aschenk          ###   ########.fr       */
+/*   Updated: 2023/11/15 18:35:34 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ int	main(void)
 		printf("Test variable '%c' is a digit.\n", test);
 	else
 		printf("Test variable '%c' is NOT a digit.\n", test);
+
 	return (0);
 }
 */
