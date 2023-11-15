@@ -6,7 +6,7 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 11:55:49 by aschenk           #+#    #+#             */
-/*   Updated: 2023/11/14 16:04:52 by aschenk          ###   ########.fr       */
+/*   Updated: 2023/11/15 13:33:03 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,30 +17,28 @@
 # include <stdlib.h>
 # include <string.h>
 
-/*
-** Part 1
-*/
+// Core Functions
+int		ft_isalpha(int c);
+int		ft_digit(int c);
+int		ft_isalnum(int c);
+int		ft_isascii(int c);
+int		ft_isprint(int c);
+size_t	ft_strlen(const char *s);
+	// ft_memset
+	// ft_bzero
+	// ft_memcpy
+	// ft_memmove
+size_t	ft_strlcpy(char *dst, const char *src, size_t size);
+// size_t	strlcat(char *dst, const char *src, size_t size);
 
 int		ft_toupper(int c);
 int		ft_tolower(int c);
-	// ft_isalpha
-	// ft_isdigit
-	// ft_isalnum
-	// ft_isascii
-	// ft_isprint
 	// ft_strchr
 	// ft_strrchr
-size_t	ft_strlen(const char *s);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
-	// ft_memset
-	// ft_bzero
 	// ft_memchr
-	// ft_memcpy
 	// ft_memcmp
-	// ft_memmove
 	// ft_strnstr
-	// ft_strlcpy
-	// ft_strlcat
 	// ft_atoi
 
 // malloc()
@@ -48,10 +46,7 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 	// ft_calloc
 	// ft_strdup
 
-/*
- **  Part 2
-*/
-
+// Secondary Functions
 	// ft_substr
 	// ft_strjoin
 	// ft_strtrim
@@ -64,9 +59,7 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 	// ft_putendl_fd
 	// ft_putnbr_fd
 
-/*
- ** Bonus
-*/
+// Bonus Functions
 	// ft_lstnew
 	// ft_lstadd_front
 	// ft_lstsize

@@ -1,31 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/13 13:17:00 by aschenk           #+#    #+#             */
-/*   Updated: 2023/11/13 17:55:42 by aschenk          ###   ########.fr       */
+/*   Created: 2023/11/15 13:12:56 by aschenk           #+#    #+#             */
+/*   Updated: 2023/11/15 13:19:36 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/libft.h"
-
-size_t	ft_strlen(const char *s)
+int	ft_isprint(int c)
 {
-	size_t	i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
+	if (c >= 32 && c <= 126)
+		return (1);
+	else
+		return (0);
 }
 
 /*
 #include <stdio.h>
+#include <ctype.h> // tp check native fct's behaviour
+
 int	main(void)
 {
-	printf("length of 'bananapie!': %zu\n", ft_strlen("bananapie!"));
+	char	test;
+
+	test = ' ';
+	if (ft_isprint(test))
+		printf("Test variable '%c' is a printable character.\n", test);
+	else
+		printf("Test variable '%c' is NOT a printable character.\n", test);
+	return (0);
 }
 */

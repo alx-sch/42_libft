@@ -6,11 +6,11 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 17:21:01 by aschenk           #+#    #+#             */
-/*   Updated: 2023/11/13 17:54:09 by aschenk          ###   ########.fr       */
+/*   Updated: 2023/11/15 12:40:49 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/libft.h"
+#include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
