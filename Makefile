@@ -6,7 +6,7 @@
 #    By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/13 11:41:06 by aschenk           #+#    #+#              #
-#    Updated: 2023/11/15 17:16:01 by aschenk          ###   ########.fr        #
+#    Updated: 2023/11/16 16:27:44 by aschenk          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,15 +25,15 @@ SRCS =	ft_isalpha.c \
 		ft_strncmp.c \
 		ft_strlcpy.c \
 		ft_strlcat.c \
-		# ft_strchr.c \
-		# ft_strrchr.c \
-		# ft_memset.c \
+		ft_strchr.c \
+		ft_strrchr.c \
+		ft_strnstr.c \
+		ft_memset.c \
 		# ft_bzero.c \
 		# ft_memchr.c \
 		# ft_memcpy.c \
 		# ft_memcmp.c \
 		# ft_memmove.c \
-		# ft_strnstr.c \
 		# ft_atoi.c \
 		# ft_calloc.c \
 		# ft_strdup.c \

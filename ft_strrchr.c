@@ -6,7 +6,7 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 13:44:06 by aschenk           #+#    #+#             */
-/*   Updated: 2023/11/16 14:30:58 by aschenk          ###   ########.fr       */
+/*   Updated: 2023/11/16 16:37:42 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ char	*ft_strrchr(const char *s, int c)
 
 	char_c = (char) c;
 	i = ft_strlen(s);
-	s += (i - 1);
-	while (i > 0)
+	s += i;
+	while (i >= 0)
 	{
 		if (*s == char_c)
 			return ((char *)s);
@@ -37,12 +37,13 @@ char	*ft_strrchr(const char *s, int c)
 
 /*
 #include <stdio.h>
+#include <string.h>
 
 int	main(void)
 {
 	char	s[] = "Hello World, Walter!";
 	char	*result;
-	int		c = 87; // 87 == 'W'
+	int		c = 287; // 87 == 'W'
 
 	result = ft_strrchr(s, c);
 

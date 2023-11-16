@@ -6,7 +6,7 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 11:55:49 by aschenk           #+#    #+#             */
-/*   Updated: 2023/11/16 14:05:38 by aschenk          ###   ########.fr       */
+/*   Updated: 2023/11/16 16:27:20 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,8 @@ int		ft_isalnum(int c);
 int		ft_isascii(int c);
 int		ft_isprint(int c);
 size_t	ft_strlen(const char *s);
-	// ft_memset
+void	*ft_memset(void *s, int c, size_t n);
+
 	// ft_bzero
 	// ft_memcpy
 	// ft_memmove
@@ -39,7 +40,7 @@ char	*ft_strrchr(const char *s, int c);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 	// ft_memchr
 	// ft_memcmp
-	// ft_strnstr
+char	*ft_strnstr(const char *big, const char *little, size_t len);
 	// ft_atoi
 
 // malloc()

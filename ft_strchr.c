@@ -6,7 +6,7 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 13:44:08 by aschenk           #+#    #+#             */
-/*   Updated: 2023/11/16 14:31:01 by aschenk          ###   ########.fr       */
+/*   Updated: 2023/11/16 15:54:59 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,9 @@ char	*ft_strchr(const char *s, int c)
 	char	char_c;
 
 	char_c = (char) c;
-	while (*s != '0')
+	if (c == '\0')
+		return ((char *)s + ft_strlen(s));
+	while (*s != '\0')
 	{
 		if (*s == char_c)
 			return ((char *)s);
@@ -36,6 +38,7 @@ char	*ft_strchr(const char *s, int c)
 
 /*
 #include <stdio.h>
+#include <string.h>
 
 int	main(void)
 {
