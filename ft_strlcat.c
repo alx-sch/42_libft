@@ -6,28 +6,23 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 17:16:30 by aschenk           #+#    #+#             */
-/*   Updated: 2023/11/15 20:07:12 by aschenk          ###   ########.fr       */
+/*   Updated: 2023/11/16 13:46:30 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** ft_strlcat - Concatenates strings, limiting the length to 'size'.
-**
-** This function appends the 'src' string to the end of the 'dst' string,
-** ensuring that the total length does not exceed 'size'.
-** The function returns the total length of the concatenated string,
-** which would have been created if there was enough space.
-**
-** Parameters:
-**	dst  - The destination string.
-**	src  - The source string to be appended.
-**	size - The size of the destination buffer.
-**
-** Return:
-**		The total length of the concatenated string
-**		(length of dst + length of src).
+What this function does is pretty simple in that it's made to concatenate two
+strings but with a small catch, it always NUL-terminate the string.
+If you give a 'size' long enough to NUL-terminate the resulting concatenated
+string without truncating it, strlcat() will simply concatenate the two strings,
+as you'd do with strcat(). If you don't give a 'size' long enough, it will
+concatenate 'size' - strlen(dst) - 1 characters, adding the NUL-terminating
+character after that.
+The strlcat() function always returns the length of the string it tried to
+create, this is the original length of dst plus the original length of src,
+even if you have to truncate the string to NUL-terminate it.
 */
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {

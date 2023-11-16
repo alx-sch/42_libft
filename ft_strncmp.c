@@ -6,11 +6,24 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 17:21:01 by aschenk           #+#    #+#             */
-/*   Updated: 2023/11/15 12:40:49 by aschenk          ###   ########.fr       */
+/*   Updated: 2023/11/16 13:48:53 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+strncmp() compares string in a lexicographic order, this means that it compares
+each characters by their corresponding ASCII values.
+strncmp() compares maximum n characters in both strings.
+The returned value depends on what difference is found.
+If the two strings are the same, the returned result will be 0 since there is
+no difference.
+If there is a difference, and the first different character in s2 is greater
+than the character at the same place in s1, the returned result will be negative.
+If there is a difference, and the first different character in s2 is less than
+the character at the same place in s1, the returned result will be positive.
+*/
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

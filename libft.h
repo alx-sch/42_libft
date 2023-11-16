@@ -6,7 +6,7 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 11:55:49 by aschenk           #+#    #+#             */
-/*   Updated: 2023/11/15 17:16:48 by aschenk          ###   ########.fr       */
+/*   Updated: 2023/11/16 14:05:38 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <string.h>
+# include <stddef.h>
 
 // Core Functions
 int		ft_isalpha(int c);
@@ -33,8 +34,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size);
 
 int		ft_toupper(int c);
 int		ft_tolower(int c);
-	// ft_strchr
-	// ft_strrchr
+char	*ft_strchr(const char *s, int c);
+char	*ft_strrchr(const char *s, int c);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 	// ft_memchr
 	// ft_memcmp

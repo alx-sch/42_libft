@@ -6,11 +6,24 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 13:33:08 by aschenk           #+#    #+#             */
-/*   Updated: 2023/11/15 18:34:45 by aschenk          ###   ########.fr       */
+/*   Updated: 2023/11/16 13:48:02 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+What this function does is pretty simple in that it's made to copy one string
+to another but with a small catch, it always NUL-terminate the string.
+If you give a dstsize long enough to NUL-terminate the string without truncating
+it, strlcpy() will simply copy the string, as you'd do with strcpy().
+If you don't give a dstsize long enough, it will copy dstsize - 1 characters
+from the source into the destination, adding the NUL-terminating character
+after that.
+The strlcpy() function always returns the length of the string that it tried
+to create, this is the length of src, even if you have to truncate the string
+to NUL-terminate it.
+*/
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
