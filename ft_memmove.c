@@ -6,7 +6,7 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 11:27:15 by aschenk           #+#    #+#             */
-/*   Updated: 2023/11/21 14:12:28 by aschenk          ###   ########.fr       */
+/*   Updated: 2023/11/21 14:30:16 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,6 @@ This is only important when src is before dst (therefore changing src while cp).
 */
 
 #include "libft.h"
-#include <stdio.h>
-#include <stdint.h>
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
