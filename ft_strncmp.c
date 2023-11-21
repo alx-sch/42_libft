@@ -6,7 +6,7 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 17:21:01 by aschenk           #+#    #+#             */
-/*   Updated: 2023/11/16 13:48:53 by aschenk          ###   ########.fr       */
+/*   Updated: 2023/11/21 11:23:59 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int	main(void)
 
 	n = 9;
 	strcpy(string1, "1234567890");
-    strcpy(string2, "1234567");
+	strcpy(string2, "1234567");
 
 	printf(" \n");
 	printf("== TEST ==\nS1: %s\nS2: %s\nn:%d\n", string1, string2, n);
