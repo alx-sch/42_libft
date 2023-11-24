@@ -6,7 +6,7 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 13:33:08 by aschenk           #+#    #+#             */
-/*   Updated: 2023/11/24 13:00:03 by aschenk          ###   ########.fr       */
+/*   Updated: 2023/11/24 13:40:00 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,9 @@ However, if the provided 'size' is insufficient, it copies 'size' - 1 characters
 from the source to the destination, ensuring that the destination
 string is NUL-terminated.
 
-An essential feature of strlcpy() is that it always returns the length of
-the string it attempted to create. This length corresponds to the length of the
-source string, even in cases where the string had to be truncated to ensure
-proper NUL-termination.
+An essential feature of strlcpy() is that it returns the length of the string it
+attempted to create. This length corresponds to the length of the source string,
+even in cases where the string had to be truncated to ensure proper NUL-termination.
 */
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
