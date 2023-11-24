@@ -6,15 +6,17 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 13:44:06 by aschenk           #+#    #+#             */
-/*   Updated: 2023/11/16 16:37:42 by aschenk          ###   ########.fr       */
+/*   Updated: 2023/11/24 13:11:55 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-This function is fairly easy to understand, it does the same thing as strchr(),
-but locates the last occurence of c.
+The strrchr() function performs a similar task as strchr(), but instead of
+locating the first occurrence of the character c from the beginning of the
+string, strrchr() identifies the last occurrence of c by searching from the end
+of the string.
 */
 
 char	*ft_strrchr(const char *s, int c)

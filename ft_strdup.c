@@ -6,18 +6,17 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 15:35:33 by aschenk           #+#    #+#             */
-/*   Updated: 2023/11/21 16:19:33 by aschenk          ###   ########.fr       */
+/*   Updated: 2023/11/23 14:53:50 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-The  strdup() function returns a pointer to a new string which is a duplicate of
-the string s. Memory for the new string is obtained  with malloc(), and can be
-freed with free().
+The strdup() function returns a pointer to a newly created string, serving as a
+duplicate of the input string 'src'. The memory for this new string is allocated
+using malloc() and can subsequently be released using free().
 
-On success, the strdup() function returns a pointer to the duplicated string.
-It returns NULL if insufficient memory was available, with errno set to indicate
-the cause of the error.
+Upon success, strdup() provides a pointer to the duplicated string. In case of
+insufficient available memory, it returns NULL.
 */
 
 #include "libft.h"

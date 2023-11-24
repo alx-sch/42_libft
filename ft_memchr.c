@@ -6,33 +6,29 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 09:35:00 by aschenk           #+#    #+#             */
-/*   Updated: 2023/11/21 11:14:14 by aschenk          ###   ########.fr       */
+/*   Updated: 2023/11/22 19:03:36 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-The memchr() function works similarly as the strchr() function, the difference
-is that memchr() works with byte string (void *) where strchr() works with
-'literal' strings (char *).
-This means we can send whatever type of data we want to memchr() and it will
-still work.
-memchr() also has a third parameter, n. This parameter tells the function how
-many bytes we want to search in. We need this parameter since s is not a
-'literal' string, it doesn't have a NUL-terminating character.
-If we didn't have this parameter, we would be reading a random
-number of bytes each time.
+The memchr() function operates similarly to strchr(), with the distinction that
+memchr() handles byte strings (void *) while strchr() is designed for 'literal'
+strings (char *). Unlike strchr(), memchr() accommodates various data types,
+making it versatile. Additionally, memchr() includes a third parameter, n,
+indicating the number of bytes to search within the given data. This parameter
+is essential because, unlike 'literal' strings, byte strings lack a
+NUL-terminating character. Without this parameter, reading an unpredictable
+number of bytes would occur in each invocation.
 */
 
 /*
-Casting to unsigned char in the ft_memchr function is done to ensure proper
-comparison when searching for a specific byte in the memory block
-pointed to by s.
-The reason for using unsigned char is related to the way characters are
-represented in C.
-In C, the char type can be either signed or unsigned, depending on the
-compiler and platform. When dealing with raw memory or byte-wise operations,
-it's common to treat characters as unsigned to avoid unexpected behavior
-when comparing values.
+The casting to unsigned char in the ft_memchr function is employed to ensure
+accurate comparisons when searching for a particular byte within the memory block
+indicated by s. This choice is motivated by the variability of character
+representation in C, where the char type can be either signed or unsigned,
+contingent on the compiler and platform. In contexts involving raw memory or
+byte-wise operations, treating characters as unsigned is a common practice to
+prevent unforeseen issues that may arise during value comparisons.
 */
 
 #include "libft.h"

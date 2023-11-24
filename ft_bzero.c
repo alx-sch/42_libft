@@ -6,15 +6,14 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 14:21:44 by aschenk           #+#    #+#             */
-/*   Updated: 2023/11/21 14:32:52 by aschenk          ###   ########.fr       */
+/*   Updated: 2023/11/22 13:59:09 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-This function works the same way as the memset() function, except you don't
-have to specify what character to write, it'll always be 0 (NUL character).
-This function does not return anything and if the number of characters
-to write you passed as size_t n is 0, bzero does nothing.
+This function operates similarly to the memset() function, with the distinction
+that it automatically writes the NUL character (ASCII: 0) without requiring you
+to explicitly specify it. Notably, bzero() does not return any value.
 */
 
 #include "libft.h"
@@ -32,34 +31,64 @@ void	ft_bzero(void *s, size_t n)
 	}
 }
 
-/*
-#include <stdio.h>
-#include <string.h>
+// #include <stdio.h>
+// #include <string.h>
 
-int	main(void)
-{
-	char chars[10] = "ABCDEFGHIJ";
-	char my_chars[10] = "ABCDEFGHIJ";
-	bzero(chars + 5, 4 * sizeof(char));
-	ft_bzero(my_chars + 5, 4 * sizeof(char));
-	printf("== TEST: Set a certain block of memory to 0 ==\n");
+// int	main(void)
+// {
+// 	char	chars[11] = "ABCDEFGHIJ";
+// 	char	my_chars[11];
+// 	strcpy(my_chars, chars);
+// 	int		bytes_to_zero = 4;
 
-	printf("bzero():\n");
-	int i = 0;
-	while (i < 10)
-	{
-		printf("%c ", chars[i]);
-		i++;
-	}
-	printf("\nft_bzero():\n");
-	i = 0;
-	while (i < 10)
-	{
-		printf("%c ", my_chars[i]);
-		i++;
-	}
-	printf("\n");
+// 	printf("========================\n");
+// 	printf("== TESTING FT_BZERO() ==\n");
+// 	printf("========================\n\n");
 
-	return (0);
-}
-*/
+// 	printf("Setting %d block(s) of memory to NUL:\n\n", bytes_to_zero);
+
+// 	printf("Lib bzero():\n");
+// 	int i = 0;
+// 	printf("Before: '");
+// 	while (i < 10)
+// 	{
+// 		printf("%c ", chars[i]);
+// 		i++;
+// 	}
+// 	printf("'\n");
+// 	bzero(chars + 5, bytes_to_zero * sizeof(char));
+// 	printf("After: '");
+// 	i = 0;
+// 	while (i < 10)
+// 	{
+// 		printf("%c ", chars[i]);
+// 		i++;
+// 	}
+// 	printf("'\n\n");
+
+// 	printf("My ft_bzero():\n");
+// 	i = 0;
+// 	printf("Before: '");
+// 	while (i < 10)
+// 	{
+// 		printf("%c ", my_chars[i]);
+// 		i++;
+// 	}
+// 	printf("'\n");
+// 	ft_bzero(my_chars + 5, bytes_to_zero * sizeof(char));
+// 	printf("After (space introduced): '");
+// 	i = 0;
+// 	while (i < 10)
+// 	{
+// 		printf("%c ", my_chars[i]);
+// 		i++;
+// 	}
+// 	printf("'\n\n");
+
+// 	if (strcmp(chars, my_chars) == 0)
+// 		printf("--> OK!\n\n");
+// 	else
+// 		printf("--> ERROR!\n\n");
+
+// 	return (0);
+// }

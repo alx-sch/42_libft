@@ -6,23 +6,25 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 13:33:08 by aschenk           #+#    #+#             */
-/*   Updated: 2023/11/16 13:48:02 by aschenk          ###   ########.fr       */
+/*   Updated: 2023/11/24 13:00:03 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-What this function does is pretty simple in that it's made to copy one string
-to another but with a small catch, it always NUL-terminate the string.
-If you give a dstsize long enough to NUL-terminate the string without truncating
-it, strlcpy() will simply copy the string, as you'd do with strcpy().
-If you don't give a dstsize long enough, it will copy dstsize - 1 characters
-from the source into the destination, adding the NUL-terminating character
-after that.
-The strlcpy() function always returns the length of the string that it tried
-to create, this is the length of src, even if you have to truncate the string
-to NUL-terminate it.
+The purpose of this function is straightforward: to copy one string to another
+while ensuring the destination string is always NUL-terminated. If you provide
+a 'size' large enough to accommodate the entire string without truncation,
+strlcpy() behaves like strcpy() and simply copies the entire string.
+However, if the provided 'size' is insufficient, it copies 'size' - 1 characters
+from the source to the destination, ensuring that the destination
+string is NUL-terminated.
+
+An essential feature of strlcpy() is that it always returns the length of
+the string it attempted to create. This length corresponds to the length of the
+source string, even in cases where the string had to be truncated to ensure
+proper NUL-termination.
 */
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)

@@ -6,7 +6,7 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 11:55:49 by aschenk           #+#    #+#             */
-/*   Updated: 2023/11/21 17:07:09 by aschenk          ###   ########.fr       */
+/*   Updated: 2023/11/23 14:32:53 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 
 // Core Functions
 int		ft_isalpha(int c);
-int		ft_digit(int c);
+int		ft_isdigit(int c);
 int		ft_isalnum(int c);
 int		ft_isascii(int c);
 int		ft_isprint(int c);
@@ -42,7 +42,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len);
 int		ft_atoi(const char *nptr);
 void	*calloc(size_t nmemb, size_t size);
 void	*ft_calloc(size_t nmemb, size_t size);
-char	*strdup(const char *s);
+char	*ft_strdup(const char *s);
 
 // Secondary Functions
 	// ft_substr

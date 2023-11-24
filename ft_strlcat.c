@@ -6,23 +6,23 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 17:16:30 by aschenk           #+#    #+#             */
-/*   Updated: 2023/11/16 13:46:30 by aschenk          ###   ########.fr       */
+/*   Updated: 2023/11/23 14:55:00 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-What this function does is pretty simple in that it's made to concatenate two
-strings but with a small catch, it always NUL-terminate the string.
-If you give a 'size' long enough to NUL-terminate the resulting concatenated
-string without truncating it, strlcat() will simply concatenate the two strings,
-as you'd do with strcat(). If you don't give a 'size' long enough, it will
-concatenate 'size' - strlen(dst) - 1 characters, adding the NUL-terminating
-character after that.
-The strlcat() function always returns the length of the string it tried to
-create, this is the original length of dst plus the original length of src,
-even if you have to truncate the string to NUL-terminate it.
+This function serves a straightforward purpose – concatenating two strings,
+always ensuring the resulting string is NULL-terminated. If the provided 'size'
+is sufficiently large to accommodate the concatenation without truncation,
+strlcat() seamlessly combines the two strings, akin to strcat().
+
+However, when the 'size' is insufficient, strlcat() concatenates
+'size - strlen(dst) - 1' characters, followed by adding the NUL-terminating
+character. Crucially, regardless of whether truncation occurs, the function
+consistently returns the length of the string it attempted to create.
+This length comprises the original lengths of both 'dst' and 'src'.
 */
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {

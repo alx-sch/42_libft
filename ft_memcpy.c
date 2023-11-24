@@ -6,16 +6,16 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 10:33:40 by aschenk           #+#    #+#             */
-/*   Updated: 2023/11/21 11:07:05 by aschenk          ###   ########.fr       */
+/*   Updated: 2023/11/23 14:44:20 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-The memcpy function copies maximum n bytes from src to dst.
-The man talks about memory overlapping, I'll explain this with details on
-the memmove function page.
-This functions works like the strcpy function, except that memcpy accepts
-void * as parameters, so we can give it any type of pointer we want to copy.
+The memcpy function efficiently copies up to 'n' bytes from the source (src) to
+the destination (dst). This function operates similarly to strcpy, yet
+distinguishes itself by accepting void * as parameters. Consequently, memcpy()
+accommodates copying of data pointed to by any type of pointer, offering a
+versatile and adaptable copying mechanism.
 */
 #include "libft.h"
 
@@ -28,6 +28,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	char_dest = (char *) dest;
 	char_src = (const char *) src;
 	i = 0;
+	if (dest == NULL && src == NULL)
+		return (NULL);
 	while (i < n)
 	{
 		char_dest[i] = char_src[i];

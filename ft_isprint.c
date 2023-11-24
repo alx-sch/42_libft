@@ -6,7 +6,7 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 13:12:56 by aschenk           #+#    #+#             */
-/*   Updated: 2023/11/15 18:35:28 by aschenk          ###   ########.fr       */
+/*   Updated: 2023/11/22 19:22:06 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,17 +20,33 @@ int	ft_isprint(int c)
 
 /*
 #include <stdio.h>
-#include <ctype.h> // tp check native fct's behaviour
+#include <ctype.h>
+
+void	test_isprint(char ch)
+{
+	int	result_std = isprint(ch);
+	int	result_ft = ft_isprint(ch);
+
+	printf("Character: %c\n", ch);
+	printf("Lib isprint(): %d\n", result_std != 0);
+	printf("My ft_isprint(): %d\n", result_ft != 0);
+
+	if ((result_std == 0 && result_ft == 0)
+		|| (result_std > 0 && result_ft > 0))
+		printf("--> OK!\n\n");
+	else
+		printf("--> ERROR!\n\n");
+}
 
 int	main(void)
 {
-	char	test;
+	printf("==========================\n");
+	printf("== TESTING FT_ISPRINT() ==\n");
+	printf("==========================\n\n");
 
-	test = ' ';
-	if (ft_isprint(test))
-		printf("Test variable '%c' is a printable character.\n", test);
-	else
-		printf("Test variable '%c' is NOT a printable character.\n", test);
+	test_isprint('A');
+	test_isprint('\t'); // Not printable, should return 0 (false)
+	test_isprint('$');
 
 	return (0);
 }

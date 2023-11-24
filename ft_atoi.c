@@ -6,20 +6,18 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 14:33:52 by aschenk           #+#    #+#             */
-/*   Updated: 2023/11/21 14:47:40 by aschenk          ###   ########.fr       */
+/*   Updated: 2023/11/22 13:58:09 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-The atoi() function converts a string to its int representation.
-Some things that the atoi() function does are not clearly said in the man.
-I'll quickly list them here: The string passed as parameter may begin with an
-arbitrary number of whitespaces as determined by isspace(3).
-After the arbitrary number of whitespaces, there can be one single optional
-'+' or '-' sign
-The remainder of the string will be converted to an int, stopping at the
-first character which is not a valid digit in the given base
-(in our case we only need to manage base 10, so the valid digits are 0-9)
+The atoi() function transforms a string into its corresponding integer
+representation.
+The string provided as a parameter may start with any number of leading
+whitespaces, as determined by isspace(3). Following these whitespaces, there
+may be an optional single '+' or '-' sign. The conversion continues until the
+first character that is not a valid digit in the specified base is encountered.
+For our purposes, where we only need to handle base 10, valid digits: 0-9.
 */
 
 #include "libft.h"
@@ -45,25 +43,51 @@ int	ft_atoi(const char *nptr)
 	return (res * sign);
 }
 
-/*
-#include <stdio.h>
+// #include <stdio.h>
+// #include <string.h>
 
-int main()
-{
-	printf("%d\n", ft_atoi("123")); // Output: 123
-	printf("%d\n", ft_atoi("-123")); // Output: -123
-	printf("%d\n", ft_atoi("  123")); // Output: 123
-	printf("%d\n", ft_atoi("123  ")); // Output: 123
-	printf("%d\n", ft_atoi("   123  ")); // Output: 123
-	printf("%d\n", ft_atoi("   -123  ")); // Output: -123
-	printf("%d\n", ft_atoi("   +123  ")); // Output: 123
-	printf("%d\n", ft_atoi("")); // Output: 0
-	printf("%d\n", ft_atoi("abc")); // Output: 0
-	printf("%d\n", ft_atoi("  123abc")); // Output: 123
-	printf("%d\n", ft_atoi("2147483647")); // Output: 2147483647
-	printf("%d\n", ft_atoi("-2147483648")); // Output: -2147483648
-	printf("%d\n", ft_atoi("2147483648")); // Output: -2147483648
-	printf("%d\n", ft_atoi("-2147483649")); // Output: 2147483647
-	return (0);
-}
-*/
+// int	main(void)
+// {
+// 	char	int_num[100];
+// 	int		lib_res;
+// 	int		my_res;
+
+// 	char test_cases[][100] =
+// 	{
+// 		"123",
+// 		"-123",
+// 		"	123",
+// 		"123	",
+// 		"   123   ",
+// 		"   -123   ",
+// 		"   +123   ",
+// 		"",
+// 		"abc-123",
+// 		"  123abc",
+// 		"2147483647",
+// 		"-2147483648",
+// 		"2147483648",
+// 		"-2147483649"
+// 	};
+
+// 	printf("=======================\n");
+// 	printf("== TESTING FT_ATOI() ==\n");
+// 	printf("=======================\n\n");
+
+// 	for (size_t i = 0; i < sizeof(test_cases) / sizeof(test_cases[0]); ++i)
+// 	{
+// 		strcpy(int_num, test_cases[i]);
+// 		lib_res = atoi(int_num);
+// 		my_res = ft_atoi(int_num);
+
+// 		printf("Testing: '%s'\n", int_num);
+// 		printf("Lib atoi(): %d\n", lib_res);
+// 		printf("My ft_atoi(): %d\n", my_res);
+
+// 		if (lib_res == my_res)
+// 			printf("OK!\n\n");
+// 		else
+// 			printf("ERROR!\n\n");
+// 	}
+// 	return (0);
+// }

@@ -6,23 +6,24 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 17:21:01 by aschenk           #+#    #+#             */
-/*   Updated: 2023/11/21 11:23:59 by aschenk          ###   ########.fr       */
+/*   Updated: 2023/11/24 13:07:39 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-strncmp() compares string in a lexicographic order, this means that it compares
-each characters by their corresponding ASCII values.
-strncmp() compares maximum n characters in both strings.
-The returned value depends on what difference is found.
-If the two strings are the same, the returned result will be 0 since there is
-no difference.
-If there is a difference, and the first different character in s2 is greater
-than the character at the same place in s1, the returned result will be negative.
-If there is a difference, and the first different character in s2 is less than
-the character at the same place in s1, the returned result will be positive.
+The strncmp() function performs a lexicographic comparison of two strings by
+comparing each character based on their ASCII values. It compares a maximum
+of n characters in both strings. The result of the comparison depends on the
+first difference encountered.
+-	If the two strings are identical, the function returns 0, indicating
+	no difference.
+-	If a difference is found, and the first differing character in the second
+	string (s2) is greater than the character at the same position in the first
+	string (s1), the result is negative.
+-	If the first differing character in s2 is less than the character at the
+	same position in s1, the result is positive.
 */
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
@@ -30,11 +31,11 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	size_t	i;
 
 	i = 0;
-	while (s1[i] && s2[i] && s1[i] == s2[i] && i < n)
+	while (i < n && s1[i] && s2[i] && s1[i] == s2[i])
 		i++;
 	if (i == n)
 		return (0);
-	return (s1[i] - s2[i]);
+	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }
 
 /*

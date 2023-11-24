@@ -6,7 +6,7 @@
 #    By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/13 11:41:06 by aschenk           #+#    #+#              #
-#    Updated: 2023/11/21 16:18:00 by aschenk          ###   ########.fr        #
+#    Updated: 2023/11/22 13:47:19 by aschenk          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,13 +61,12 @@ SRCS =	ft_isalpha.c \
 		# ft_lstiter.c \
 		# ft_lstmap.c \
 
-
 OBJS = ${SRCS:.c=.o}
 
 all: $(NAME)
 
 $(NAME) : $(OBJS)
-		ar rcs $(NAME) $(OBJS)
+		ar rc $(NAME) $(OBJS)
 
 clean:
 		rm -f $(OBJS)

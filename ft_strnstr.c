@@ -6,15 +6,18 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 14:36:31 by aschenk           #+#    #+#             */
-/*   Updated: 2023/11/16 16:10:52 by aschenk          ###   ########.fr       */
+/*   Updated: 2023/11/24 13:09:58 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-The strnstr() function works in the same way as strchr() but searches for the
-complete substring in max 'len' characters instead of in the complete haystack.
+The strnstr() function operates similarly to strchr(), but with a notable
+difference. While both functions search for occurrences of characters within a
+given range, strnstr() specifically searches for the presence of an entire
+substring (a sequence of characters) within the first 'len' characters of the
+haystack, rather than just a single character
 */
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
@@ -25,10 +28,10 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	i = 0;
 	if (needle[0] == '\0')
 		return ((char *)haystack);
-	while (haystack[i] != '\0' && i < len)
+	while (i < len && haystack[i] != '\0')
 	{
 		j = 0;
-		while (haystack[i + j] == needle[j] && needle[j] != '\0')
+		while (i + j < len && haystack[i + j] == needle[j] && needle[j] != '\0')
 			j++;
 		if (needle[j] == '\0')
 			return ((char *)haystack + i);
@@ -58,6 +61,8 @@ int main(void)
 	char haystack5[] = "Beginning and end!";
 	char needle5[] = "end";
 
+	char haystack6[] = "lorem ipsum dolor sit amet";
+	char needle6[] = "dolor";
 
 	char *result;
 	char *result_strstr;
@@ -152,6 +157,25 @@ int main(void)
 			result - haystack5);
 	else
 		printf("Test 5 ft_strstr(): Not found\n");
+	printf(" \n");
+
+	// Test case 6
+	result_strstr = strnstr(haystack6, needle6, 15);
+	result = ft_strnstr(haystack6, needle6, 15);
+	printf("Test 6 Haystack: %s\n", haystack6);
+	printf("Test 6 Needle: %s\n", needle6);
+	printf("Only checking first 15 positions of haystack.\n");
+	if (result_strstr != NULL)
+		printf("Test 6 strstr(): Found at position %ld\n",
+			result_strstr - haystack6);
+	else
+		printf("Test 6 strstr(): Not found\n");
+
+	if (result != NULL)
+		printf("Test 6 ft_strstr(): Found at position %ld\n",
+			result - haystack6);
+	else
+		printf("Test 6 ft_strstr(): Not found\n");
 	printf(" \n");
 
 	return (0);

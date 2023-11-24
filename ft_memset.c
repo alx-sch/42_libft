@@ -6,21 +6,16 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 16:27:27 by aschenk           #+#    #+#             */
-/*   Updated: 2023/11/16 17:25:08 by aschenk          ###   ########.fr       */
+/*   Updated: 2023/11/23 14:51:08 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-As the man description says, this function writes len bytes of value c to the
-string b.
-The value of c will be converted to an unsigned char, so to set this value in
-the b string, we'll have to convert the b string to a pointer to unsigned char.
-But remember the return value, we have to return the first parameter of the
-function, the void *b string.
-So how do we convert this parameter without changing the original one ?
-Think about temporary variables.
+The purpose of this function is to write 'len' bytes of the value 'c' to a
+string. The return value is the first parameter of the function, which is the
+void pointer to the string.
 */
 
 void	*ft_memset(void *s, int c, size_t n)

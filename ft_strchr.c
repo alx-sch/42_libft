@@ -6,33 +6,34 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 13:44:08 by aschenk           #+#    #+#             */
-/*   Updated: 2023/11/16 15:54:59 by aschenk          ###   ########.fr       */
+/*   Updated: 2023/11/23 14:52:31 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-The strchr() function searches for one character in a string. If it finds the
-character, it returns a pointer to the first occurence of this
-specific character.
-If it don't find any occurence of this character, it returns NULL.
-We also have to return a pointer to the character if the character is \0.
+The strchr() function is designed to locate a specific character within a string.
+Upon finding the character, it returns a pointer pointing to the first occurrence
+of that particular character. In the event that no instance of the character is
+found, the function returns NULL.
+It's important to note that if the character being searched for is '\0',
+the function still needs to return a pointer pointing to this character.
 */
 
 char	*ft_strchr(const char *s, int c)
 {
 	char	char_c;
 
-	char_c = (char) c;
-	if (c == '\0')
-		return ((char *)s + ft_strlen(s));
+	char_c = (char)c;
 	while (*s != '\0')
 	{
 		if (*s == char_c)
 			return ((char *)s);
 		s++;
 	}
+	if (*s == char_c)
+		return ((char *)s);
 	return (NULL);
 }
 

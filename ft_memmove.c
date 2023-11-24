@@ -6,20 +6,25 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 11:27:15 by aschenk           #+#    #+#             */
-/*   Updated: 2023/11/21 14:30:16 by aschenk          ###   ########.fr       */
+/*   Updated: 2023/11/23 14:47:14 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-The memmove() function does the same thing as the memcpy() function but this
-time, the copy is made in a non-destructive manner. This means that
-both strings (src and dst) can overlap in memory and this function does not
-overwrite part of, or the entirety of the string when making the copy.
+The memmove() function performs the same task as memcpy(), but with a crucial
+distinction – it executes the copy operation in a non-destructive manner. Unlike
+memcpy(), memmove() is designed to handle overlapping memory regions, ensuring
+that it does not inadvertently overwrite part or the entirety of the string
+during the copying process.
 
-This is only important when src is before dst (therefore changing src while cp).
-'if ((size_t)dest - (size_t)src < n)' is only true src is before dst as a
-'negative' (size_t)dest - (size_t)src does not exist
-(comes out SIZE_MAX for size_t).
+The significance of this non-destructive behavior becomes apparent when the
+source (src) and destination (dst) strings overlap in memory. Particularly
+noteworthy is the scenario where src precedes dst, allowing for changes in src
+while copying.
+To address this, the condition (size_t)dest - (size_t)src < n becomes relevant,
+ensuring the proper handling of cases where src precedes dst.
+This condition evaluates to true only when src is positioned before dst,
+as a 'negative' (size_t)dest - (size_t)src is non-existent -> looping to SIZE_MAX
 */
 
 #include "libft.h"
@@ -28,6 +33,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	size_t	i;
 
+	if (dest == NULL && src == NULL)
+		return (NULL);
 	if ((size_t)dest - (size_t)src < n)
 	{
 		i = n;
