@@ -6,7 +6,7 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 13:03:15 by aschenk           #+#    #+#             */
-/*   Updated: 2023/11/22 18:57:38 by aschenk          ###   ########.fr       */
+/*   Updated: 2023/11/24 19:20:31 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,5 +48,6 @@ int	main(void)
 	test_isdigit('A');
 	test_isdigit('$');
 
+	return (0);
 }
 */

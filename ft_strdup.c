@@ -6,14 +6,14 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 15:35:33 by aschenk           #+#    #+#             */
-/*   Updated: 2023/11/23 14:53:50 by aschenk          ###   ########.fr       */
+/*   Updated: 2023/11/24 19:23:05 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 The strdup() function returns a pointer to a newly created string, serving as a
 duplicate of the input string 'src'. The memory for this new string is allocated
-using malloc() and can subsequently be released using free().
+using malloc().
 
 Upon success, strdup() provides a pointer to the duplicated string. In case of
 insufficient available memory, it returns NULL.

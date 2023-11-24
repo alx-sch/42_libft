@@ -6,11 +6,9 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 13:44:06 by aschenk           #+#    #+#             */
-/*   Updated: 2023/11/24 13:11:55 by aschenk          ###   ########.fr       */
+/*   Updated: 2023/11/24 19:24:28 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 /*
 The strrchr() function performs a similar task as strchr(), but instead of
@@ -18,6 +16,8 @@ locating the first occurrence of the character c from the beginning of the
 string, strrchr() identifies the last occurrence of c by searching from the end
 of the string.
 */
+
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {

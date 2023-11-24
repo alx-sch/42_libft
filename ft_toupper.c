@@ -6,7 +6,7 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 17:31:45 by aschenk           #+#    #+#             */
-/*   Updated: 2023/11/24 13:12:03 by aschenk          ###   ########.fr       */
+/*   Updated: 2023/11/24 19:24:56 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,7 @@ int	ft_toupper(int c)
 int	main(void)
 {
 	printf("%c\n", ft_toupper('e'));
+
+	return(0);
 }
 */

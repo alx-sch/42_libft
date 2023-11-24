@@ -6,11 +6,9 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 17:16:30 by aschenk           #+#    #+#             */
-/*   Updated: 2023/11/23 14:55:00 by aschenk          ###   ########.fr       */
+/*   Updated: 2023/11/24 19:23:32 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 /*
 This function serves a straightforward purpose – concatenating two strings,
@@ -24,6 +22,9 @@ character. Crucially, regardless of whether truncation occurs, the function
 consistently returns the length of the string it attempted to create.
 This length comprises the original lengths of both 'dst' and 'src'.
 */
+
+#include "libft.h"
+
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	len_dst;

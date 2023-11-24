@@ -6,7 +6,7 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 14:48:45 by aschenk           #+#    #+#             */
-/*   Updated: 2023/11/22 18:58:29 by aschenk          ###   ########.fr       */
+/*   Updated: 2023/11/24 19:18:52 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,10 @@ calloc() functions similarly to malloc(); however, it distinguishes itself by
 initializing all allocated memory bytes to zero. This stands in contrast
 to malloc(), which leaves the memory content as it was, containing potential
 random or "gibberish" values from previous data stored in that memory location.
-*/
 
-/*
- calloc() function is specified to always return a valid pointer that can be
- safely used to access elements (even when the number of elements is 0).
- It essentially provides a valid, empty block of memory.
+calloc() function is specified to always return a valid pointer that can be
+safely used to access elements (even when the number of elements is 0).
+It essentially provides a valid, empty block of memory.
 */
 
 #include "libft.h"

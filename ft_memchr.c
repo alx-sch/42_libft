@@ -6,7 +6,7 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 09:35:00 by aschenk           #+#    #+#             */
-/*   Updated: 2023/11/22 19:03:36 by aschenk          ###   ########.fr       */
+/*   Updated: 2023/11/24 19:21:26 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,9 @@ indicating the number of bytes to search within the given data. This parameter
 is essential because, unlike 'literal' strings, byte strings lack a
 NUL-terminating character. Without this parameter, reading an unpredictable
 number of bytes would occur in each invocation.
-*/
 
-/*
-The casting to unsigned char in the ft_memchr function is employed to ensure
-accurate comparisons when searching for a particular byte within the memory block
+The casting to unsigned char in ft_memchr() is employed to ensure accurate
+comparisons when searching for a particular byte within the memory block
 indicated by s. This choice is motivated by the variability of character
 representation in C, where the char type can be either signed or unsigned,
 contingent on the compiler and platform. In contexts involving raw memory or
