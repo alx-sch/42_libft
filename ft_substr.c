@@ -6,10 +6,10 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 13:50:05 by aschenk           #+#    #+#             */
-/*   Updated: 2023/11/24 13:50:30 by aschenk          ###   ########.fr       */
+/*   Updated: 2023/11/24 13:56:09 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 }
