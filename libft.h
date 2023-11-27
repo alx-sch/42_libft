@@ -6,7 +6,7 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 11:55:49 by aschenk           #+#    #+#             */
-/*   Updated: 2023/11/24 16:36:10 by aschenk          ###   ########.fr       */
+/*   Updated: 2023/11/27 17:58:15 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,13 +49,13 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *s, char c);
-	// ft_itoa
-	// ft_strmapi
-	// ft_striteri
-	// ft_putchar_fd
-	// ft_putstr_fd
-	// ft_putendl_fd
-	// ft_putnbr_fd
+char	*ft_itoa(int n);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char *s, int fd);
+void	ft_putendl_fd(char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
 
 // Bonus Functions
 	// ft_lstnew

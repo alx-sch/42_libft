@@ -6,7 +6,7 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 16:35:35 by aschenk           #+#    #+#             */
-/*   Updated: 2023/11/24 19:22:21 by aschenk          ###   ########.fr       */
+/*   Updated: 2023/11/27 21:17:19 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,13 +101,31 @@ char	*ft_extract_first_word(char *str, char delim)
 	return (word);
 }
 
+/*
+I failed to integrate the fct below into ft_split w/o making it too long for
+Norminette. But including this it as
+
+if (!word_arr[i])
+{
+	ft_free_word_arr(word_arr, i);
+	return (NULL);
+}
+
+Would do the trick to also pass Francinette --strict
+
+void	ft_free_word_arr(char **word_arr, size_t i)
+{
+	while (i > 0)
+		free(word_arr[--i]);
+	free(word_arr);
+}
+*/
+
 char	**ft_split(char const *s, char c)
 {
 	char	**word_arr;
 	size_t	i;
 
-	if (!s)
-		return (NULL);
 	word_arr = malloc(sizeof(char *) * (ft_count_words(s, c) + 1));
 	if (!word_arr)
 		return (NULL);
@@ -119,6 +137,8 @@ char	**ft_split(char const *s, char c)
 		if (*s)
 		{
 			word_arr[i] = ft_extract_first_word((char *)s, c);
+			if (!word_arr[i])
+				return (NULL);
 			i++;
 		}
 		while (*s && *s != c)

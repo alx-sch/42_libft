@@ -6,7 +6,7 @@
 #    By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/13 11:41:06 by aschenk           #+#    #+#              #
-#    Updated: 2023/11/24 16:36:00 by aschenk          ###   ########.fr        #
+#    Updated: 2023/11/27 17:58:04 by aschenk          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,13 +41,13 @@ SRCS =	ft_isalpha.c \
 		ft_strjoin.c \
 		ft_strtrim.c \
 		ft_split.c \
-		# ft_itoa.c \
-		# ft_strmapi.c \
-		# ft_striteri.c \
-		# ft_putchar_fd.c \
-		# ft_putstr_fd.c \
-		# ft_putendl_fd.c \
-		# ft_putnbr_fd.c \
+		ft_itoa.c \
+		ft_strmapi.c \
+		ft_striteri.c \
+		ft_putchar_fd.c \
+		ft_putstr_fd.c \
+		ft_putendl_fd.c \
+		ft_putnbr_fd.c \
 		# \
 		# ft_lstnew.c \
 		# ft_lstadd_front.c \
