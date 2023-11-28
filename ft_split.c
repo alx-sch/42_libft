@@ -6,7 +6,7 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 16:35:35 by aschenk           #+#    #+#             */
-/*   Updated: 2023/11/27 21:17:19 by aschenk          ###   ########.fr       */
+/*   Updated: 2023/11/28 15:46:36 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,37 +81,27 @@ size_t	ft_first_word_len(char *str, char delim)
 	return (i);
 }
 
-char	*ft_extract_first_word(char *str, char delim)
+char	*ft_store_extracted_word(char *str, char delim,
+	char ***word_arr, size_t i)
 {
-	size_t	i;
 	size_t	len;
 	char	*word;
+	size_t	j;
 
-	i = 0;
 	len = ft_first_word_len(str, delim);
 	word = malloc(sizeof(char) * (len + 1));
 	if (!word)
 		return (NULL);
-	while (i < len)
+	j = 0;
+	while (j < len)
 	{
-		word[i] = str[i];
-		i++;
+		word[j] = str[j];
+		j++;
 	}
-	word[i] = '\0';
+	word[j] = '\0';
+	(*word_arr)[i] = word;
 	return (word);
 }
-
-/*
-I failed to integrate the fct below into ft_split w/o making it too long for
-Norminette. But including this it as
-
-if (!word_arr[i])
-{
-	ft_free_word_arr(word_arr, i);
-	return (NULL);
-}
-
-Would do the trick to also pass Francinette --strict
 
 void	ft_free_word_arr(char **word_arr, size_t i)
 {
@@ -119,7 +109,6 @@ void	ft_free_word_arr(char **word_arr, size_t i)
 		free(word_arr[--i]);
 	free(word_arr);
 }
-*/
 
 char	**ft_split(char const *s, char c)
 {
@@ -136,9 +125,11 @@ char	**ft_split(char const *s, char c)
 			s++;
 		if (*s)
 		{
-			word_arr[i] = ft_extract_first_word((char *)s, c);
-			if (!word_arr[i])
+			if (!ft_store_extracted_word((char *)s, c, &word_arr, i))
+			{
+				ft_free_word_arr(word_arr, i);
 				return (NULL);
+			}
 			i++;
 		}
 		while (*s && *s != c)
