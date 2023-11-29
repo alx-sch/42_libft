@@ -16,6 +16,8 @@ A custom implementation of key standard C library functions. This library serves
 
 ## Testing 
 
+Testing numerous core functions (Part 1), comparing their functionality and behavior with the corresponding native functions.
+
 1. Place the `test_libft.c` file in the same directory as your header file (`libft.h`) and library (`libft.a`), like [this](https://github.com/alx-sch/42_libft/tree/main/testing_libft).
 
 2. Compile the program using the following command:
