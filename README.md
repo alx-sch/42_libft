@@ -3,7 +3,7 @@
     <img src="https://github.com/alx-sch/42_libft/assets/134595144/bce87494-3c97-4028-ab66-83a48190603d" alt="libft" />
 </p>
 
-A custom implementation of key standard C library functions. This library serves as a foundation for subsequent projects by providing a collection of essential functions commonly used in C programming.
+A custom implementation of key standard C library and other useful functions. This library serves as a toolkit for subsequent projects by providing a collection of essential functions commonly used in C programming.
 
 All functions have been tested and successfully passed `francinette --strict` (refer to: https://github.com/xicodomingues/francinette).
 
