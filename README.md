@@ -5,6 +5,7 @@
 
 A custom implementation of key standard C library functions. This library serves as a foundation for subsequent projects by providing a collection of essential functions commonly used in C programming.
 
+All functions have been tested and successfully passed `francinette --strict` (refer to: https://github.com/xicodomingues/francinette).
 
 ## Features
 
