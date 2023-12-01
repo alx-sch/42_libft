@@ -15,7 +15,7 @@ All functions have been tested and successfully passed `francinette --strict` (r
 - **Linked Lists:** A set of functions for creating and manipulating linked lists.
 - **Additional Utilities:** Various helper functions for general-purpose use.
 
-## Testing 
+## Testing Libft (not complete)
 
 Testing numerous core functions (Part 1), comparing their functionality and behavior with the corresponding native functions.
 
