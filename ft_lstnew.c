@@ -6,7 +6,7 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 10:58:59 by aschenk           #+#    #+#             */
-/*   Updated: 2023/11/28 16:45:19 by aschenk          ###   ########.fr       */
+/*   Updated: 2023/12/01 14:25:48 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ t_list	*ft_lstnew(void *content)
 	t_list	*new;
 
 	new = (t_list *)malloc(sizeof(t_list));
-	if (!new)
+	if (new == NULL)
 		return (NULL);
 	new->content = content;
 	new->next = NULL;

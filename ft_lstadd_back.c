@@ -1,30 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/28 16:53:14 by aschenk           #+#    #+#             */
-/*   Updated: 2023/11/30 18:04:22 by aschenk          ###   ########.fr       */
+/*   Created: 2023/11/29 16:17:27 by aschenk           #+#    #+#             */
+/*   Updated: 2023/11/30 18:05:13 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Returns the number of elements in a list.
+// Adds the node ’new’ at the end of the list.
 
 #include "libft.h"
 
-int	ft_lstsize(t_list *lst)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	int	len;
+	t_list	*current;
 
-	len = 0;
-	while (lst != NULL)
+	if (lst == NULL || new == NULL)
+		return ;
+	if (*lst == NULL)
+		*lst = new;
+	else
 	{
-		lst = lst->next;
-		len++;
+		current = *lst;
+		while (current->next != NULL)
+			current = current->next;
+		current->next = new;
 	}
-	return (len);
 }
 
 /*
@@ -49,10 +53,19 @@ int	main(void)
 
 	node1->next = node2;
 	node2->next = node3;
-	printf("Linked List: \n");
-	print_list(node1);
-	printf("List Size: %d\n", ft_lstsize(node1));
 
+	printf("Linked List before adding a new node: \n");
+	print_list(node1);
+	printf("\n");
+
+	// Add a new node to the end of the list
+	t_list *node4 = ft_lstnew("Four");
+	ft_lstadd_back(&node1, node4);
+
+	printf("Linked List after adding a new node: \n");
+	print_list(node1);
+
+	// Free the list
 	while (node1)
 	{
 		t_list *temp = node1;

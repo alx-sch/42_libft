@@ -1,44 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/28 16:53:14 by aschenk           #+#    #+#             */
-/*   Updated: 2023/11/30 18:04:22 by aschenk          ###   ########.fr       */
+/*   Created: 2023/11/30 17:57:30 by aschenk           #+#    #+#             */
+/*   Updated: 2023/11/30 18:44:20 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Returns the number of elements in a list.
+/*
+Iterates the list ’lst’ and applies the function ’f’ on the content of each node.
+*/
 
 #include "libft.h"
 
-int	ft_lstsize(t_list *lst)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	int	len;
-
-	len = 0;
+	if (lst == NULL || f == NULL)
+		return ;
 	while (lst != NULL)
 	{
+		f(lst->content);
 		lst = lst->next;
-		len++;
 	}
-	return (len);
 }
 
 /*
 #include <stdio.h>
 
-void	print_list(t_list *lst)
+void	print_node(void *content)
 {
-	while (lst)
-	{
-		printf("%p", (void *)lst);
-		printf("-> %s\n", (char *)lst->content);
-		lst = lst->next;
-	}
-	printf("NULL\n");
+	printf("[%p] -> %s\n", (void *)content, (char *)content);
 }
 
 int	main(void)
@@ -49,16 +43,8 @@ int	main(void)
 
 	node1->next = node2;
 	node2->next = node3;
-	printf("Linked List: \n");
-	print_list(node1);
-	printf("List Size: %d\n", ft_lstsize(node1));
 
-	while (node1)
-	{
-		t_list *temp = node1;
-		node1 = node1->next;
-		free(temp);
-	}
+	ft_lstiter(node1, print_node);
 
 	return (0);
 }

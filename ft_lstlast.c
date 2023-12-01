@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/28 16:53:14 by aschenk           #+#    #+#             */
-/*   Updated: 2023/11/30 18:04:22 by aschenk          ###   ########.fr       */
+/*   Created: 2023/11/29 15:55:17 by aschenk           #+#    #+#             */
+/*   Updated: 2023/11/30 18:04:43 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Returns the number of elements in a list.
+// Returns the last node of the list.
 
 #include "libft.h"
 
-int	ft_lstsize(t_list *lst)
+t_list	*ft_lstlast(t_list *lst)
 {
-	int	len;
+	t_list	*current;
 
-	len = 0;
-	while (lst != NULL)
-	{
-		lst = lst->next;
-		len++;
-	}
-	return (len);
+	if (lst == NULL)
+		return (NULL);
+	current = lst;
+	while (current->next != NULL)
+		current = current->next;
+	return (current);
 }
 
 /*
@@ -49,9 +48,12 @@ int	main(void)
 
 	node1->next = node2;
 	node2->next = node3;
+
 	printf("Linked List: \n");
 	print_list(node1);
-	printf("List Size: %d\n", ft_lstsize(node1));
+
+	t_list *last_node = ft_lstlast(node1);
+	printf("Last node: %s\n", (char *)last_node->content);
 
 	while (node1)
 	{

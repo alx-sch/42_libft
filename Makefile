@@ -6,7 +6,7 @@
 #    By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/13 11:41:06 by aschenk           #+#    #+#              #
-#    Updated: 2023/11/28 17:32:45 by aschenk          ###   ########.fr        #
+#    Updated: 2023/12/01 17:03:09 by aschenk          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,12 +52,12 @@ SRCS =			ft_isalpha.c \
 BONUS_SRCS =	ft_lstnew.c \
 				ft_lstadd_front.c \
 				ft_lstsize.c \
-				# ft_lstlast.c \
-			# ft_lstadd_back.c \
-			# ft_lstdelone.c \
-			# ft_lstclear.c \
-			# ft_lstiter.c \
-			# ft_lstmap.c \
+				ft_lstlast.c \
+				ft_lstadd_back.c \
+				ft_lstdelone.c \
+				ft_lstclear.c \
+				ft_lstiter.c \
+				ft_lstmap.c \
 
 OBJS =			${SRCS:.c=.o}
 BONUS_OBJS =	${BONUS_SRCS:.c=.o}
