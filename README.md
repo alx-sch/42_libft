@@ -32,3 +32,5 @@ Testing numerous core functions (Part 1), comparing their functionality and beha
     ```bash
     ./testing_libft
     ```
+## Acknowledgement
+Function descriptions are mostly based on the ones found in the [Gitbook](https://42-cursus.gitbook.io/guide/rank-00/libft) by [Laura](https://github.com/TheBrisly) and [Simon](https://github.com/Laendrun).
