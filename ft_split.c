@@ -6,7 +6,7 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 16:35:35 by aschenk           #+#    #+#             */
-/*   Updated: 2023/11/28 15:46:36 by aschenk          ###   ########.fr       */
+/*   Updated: 2023/12/04 16:47:31 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,25 +29,32 @@ ft_first_word_len():
 Returns the length of the initial word in a string until a specified delimiter or
 the NUL char is encountered. It assumes that there are no leading delimiters.
 
-ft_extract_first_word():
-Returns a new dynamically allocated string that contains the characters of the
-first word in the input string until the delimiter or the end of the string is
-reached. It uses ft_first_word_len() to determine the length of the first word.
+ft_store_extracted_word():
+Extracts the characters of the first word in a given input string until a
+specified delimiter or the end of the string is encountered. The function
+dynamically allocates memory for a new string to store the extracted word.
+It uses ft_first_word_len() to determine the length of the first word in the
+input string.
+
+ft_free_word_arr():
+Takes as input an array of strings (word_arr) and the size of the array (i).
+It iterates through the array, freeing the memory allocated for each string
+individually. After freeing all individual strings, it then frees the memory
+allocated for the array itself. The function ensures proper memory cleanup to
+prevent memory leaks (used in ft_split() if memory allocation for a string
+failed in ft_store_extracted_word()).
 
 ft_split():
-If the input string s is NULL, the function immediately returns NULL, indicating
-an invalid input.
 The function allocates memory for an array of strings (word_arr). The size of
 this array is determined by the number of words in the input string, calculated
 using ft_count_words(). An additional element is reserved for the terminating
 NULL pointer.
 Then, the function iterates through the input string in a loop, skipping
-delimiters until it finds the beginning of a word. It extracts this word using
-ft_extract_first_word(), stores it in word_arr, and the array index i is
-incremented -- this process (skipping delimiters, extracting and storing
-encountered word) is repeated until the whole string is looped through.
-After processing all words, the last element of the word_arr is set to NULL,
-indicating the end of the array.
+delimiters until it finds the beginning of a word. It extracts and stores this
+word in word_arr using ft_store_extracted_word(). This process (skipping
+delimiters, extracting and storing encountered word) is repeated until the whole
+string is looped through. After processing all words, the last element of
+word_arr is set to NULL, indicating the end of the array.
 */
 
 #include "libft.h"
