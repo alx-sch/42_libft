@@ -5,7 +5,8 @@
 
 A custom implementation of key standard C library and other useful functions. This library serves as a toolkit for subsequent projects by providing a collection of essential functions commonly used in C programming.
 
-All functions have been tested and successfully passed `francinette --strict` (refer to: https://github.com/xicodomingues/francinette).
+All functions have been tested and successfully passed `francinette --strict` (refer to: https://github.com/xicodomingues/francinette).  
+Every function file includes a testing main at the end.
 
 ## Features
 
@@ -15,7 +16,7 @@ All functions have been tested and successfully passed `francinette --strict` (r
 - **Linked Lists:** A set of functions for creating and manipulating linked lists.
 - **Additional Utilities:** Various helper functions for general-purpose use.
 
-## Testing 
+## Testing Libft (not complete)
 
 Testing numerous core functions (Part 1), comparing their functionality and behavior with the corresponding native functions.
 
@@ -32,3 +33,5 @@ Testing numerous core functions (Part 1), comparing their functionality and beha
     ```bash
     ./testing_libft
     ```
+## Acknowledgement
+Function descriptions are mostly based on the ones found in the [Gitbook](https://42-cursus.gitbook.io/guide/rank-00/libft) by [Laura](https://github.com/TheBrisly) and [Simon](https://github.com/Laendrun).
