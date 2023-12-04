@@ -6,7 +6,7 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 16:35:35 by aschenk           #+#    #+#             */
-/*   Updated: 2023/12/04 16:47:31 by aschenk          ###   ########.fr       */
+/*   Updated: 2023/12/04 19:09:44 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,24 +25,17 @@ Takes a string str and a delimiter character delim as parameters. Its purpose is
 to count the number of words in the given string, where words are separated by
 the specified delimiter.
 
-ft_first_word_len():
-Returns the length of the initial word in a string until a specified delimiter or
-the NUL char is encountered. It assumes that there are no leading delimiters.
+ft_extract_word():
+Extracts a substring from the input string str starting from the beginning until
+it encounters a specified delimiter or reaches the end of the string. The
+function dynamically allocates memory for the extracted substring, copies the
+characters from the input string to the newly allocated memory, and appends a
+null terminator.
 
-ft_store_extracted_word():
-Extracts the characters of the first word in a given input string until a
-specified delimiter or the end of the string is encountered. The function
-dynamically allocates memory for a new string to store the extracted word.
-It uses ft_first_word_len() to determine the length of the first word in the
-input string.
-
-ft_free_word_arr():
-Takes as input an array of strings (word_arr) and the size of the array (i).
-It iterates through the array, freeing the memory allocated for each string
-individually. After freeing all individual strings, it then frees the memory
-allocated for the array itself. The function ensures proper memory cleanup to
-prevent memory leaks (used in ft_split() if memory allocation for a string
-failed in ft_store_extracted_word()).
+ft_word_into_array():
+Uses ft_extract_word() and stores extracted word at the i-th position in the
+array of string arrays. If the extraction is not successful, it cleans up the
+previously allocated memory (substrings and array) and returns NULL.
 
 ft_split():
 The function allocates memory for an array of strings (word_arr). The size of
@@ -51,8 +44,8 @@ using ft_count_words(). An additional element is reserved for the terminating
 NULL pointer.
 Then, the function iterates through the input string in a loop, skipping
 delimiters until it finds the beginning of a word. It extracts and stores this
-word in word_arr using ft_store_extracted_word(). This process (skipping
-delimiters, extracting and storing encountered word) is repeated until the whole
+word in word_arr using ft_word_into_array(). This process (skipping delimiters,
+extracting and storing encountered word) is repeated until the whole
 string is looped through. After processing all words, the last element of
 word_arr is set to NULL, indicating the end of the array.
 */
@@ -78,67 +71,66 @@ size_t	ft_count_words(char const *str, char delim)
 	return (count);
 }
 
-size_t	ft_first_word_len(char *str, char delim)
+char	*ft_extract_word(char const *str, char delim)
 {
-	size_t	i;
-
-	i = 0;
-	while (str[i] && str[i] != delim)
-		i++;
-	return (i);
-}
-
-char	*ft_store_extracted_word(char *str, char delim,
-	char ***word_arr, size_t i)
-{
-	size_t	len;
 	char	*word;
-	size_t	j;
+	int		i;
+	int		len;
 
-	len = ft_first_word_len(str, delim);
-	word = malloc(sizeof(char) * (len + 1));
+	len = 0;
+	while (str[len] && str[len] != delim)
+		len++;
+	word = (char *)malloc(sizeof(char) * (len + 1));
 	if (!word)
 		return (NULL);
-	j = 0;
-	while (j < len)
+	i = 0;
+	while (i < len)
 	{
-		word[j] = str[j];
-		j++;
+		word[i] = str[i];
+		i++;
 	}
-	word[j] = '\0';
-	(*word_arr)[i] = word;
+	word[i] = '\0';
 	return (word);
 }
 
-void	ft_free_word_arr(char **word_arr, size_t i)
+char	*ft_word_into_array(char const *str, char delim, size_t i, char **arr)
 {
-	while (i > 0)
-		free(word_arr[--i]);
-	free(word_arr);
+	if (!str)
+		return (NULL);
+	arr[i] = ft_extract_word(str, delim);
+	if (!arr[i])
+	{
+		while (i > 0)
+		{
+			i--;
+			free(arr[i]);
+		}
+		free(arr);
+		return (NULL);
+	}
+	return (arr[i]);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	char	**word_arr;
+	size_t	nb_words;
 	size_t	i;
+	char	**word_arr;
 
-	word_arr = malloc(sizeof(char *) * (ft_count_words(s, c) + 1));
+	if (!s)
+		return (NULL);
+	nb_words = ft_count_words(s, c);
+	word_arr = malloc(sizeof(char *) * (nb_words + 1));
 	if (!word_arr)
 		return (NULL);
-	i = 0;
-	while (*s)
+	i = -1;
+	while (++i < nb_words)
 	{
 		while (*s && *s == c)
 			s++;
-		if (*s)
-		{
-			if (!ft_store_extracted_word((char *)s, c, &word_arr, i))
-			{
-				ft_free_word_arr(word_arr, i);
-				return (NULL);
-			}
-			i++;
-		}
+		word_arr[i] = ft_word_into_array(s, c, i, word_arr);
+		if (word_arr[i] == NULL)
+			return (NULL);
 		while (*s && *s != c)
 			s++;
 	}
