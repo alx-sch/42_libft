@@ -6,7 +6,7 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 16:35:35 by aschenk           #+#    #+#             */
-/*   Updated: 2023/12/04 19:09:44 by aschenk          ###   ########.fr       */
+/*   Updated: 2023/12/05 11:43:41 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ The function takes the input string s and splits it into an array containing eac
 of its words. Words are separated by one or more instances of the character c,
 which serves as the word delimiter. To facilitate easy iteration over the array
 of words, an extra element is allocated and set to a NULL pointer, allowing a
-simple loop condition just like to checking a NULL char in a  string:
+simple loop condition just like to checking a NULL char in a string:
 while (word_arr[i] != NULL).
 
 ft_count_words():
@@ -52,7 +52,7 @@ word_arr is set to NULL, indicating the end of the array.
 
 #include "libft.h"
 
-size_t	ft_count_words(char const *str, char delim)
+static size_t	ft_count_words(char const *str, char delim)
 {
 	size_t	count;
 	size_t	i;
@@ -71,7 +71,7 @@ size_t	ft_count_words(char const *str, char delim)
 	return (count);
 }
 
-char	*ft_extract_word(char const *str, char delim)
+static char	*ft_extract_word(char const *str, char delim)
 {
 	char	*word;
 	int		i;
@@ -93,7 +93,9 @@ char	*ft_extract_word(char const *str, char delim)
 	return (word);
 }
 
-char	*ft_word_into_array(char const *str, char delim, size_t i, char **arr)
+static char	*ft_word_into_array(
+	char const *str, char delim,
+	size_t i, char **arr)
 {
 	if (!str)
 		return (NULL);
