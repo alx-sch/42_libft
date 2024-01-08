@@ -16,7 +16,7 @@ Every function file includes a testing main at the end.
 - **Linked Lists:** A set of functions for creating and manipulating linked lists.
 - **Additional Utilities:** Various helper functions for general-purpose use.
 
-## Testing Libft (not complete)
+## Testing Libft (for selected functions)
 
 Testing numerous core functions (Part 1), comparing their functionality and behavior with the corresponding native functions.
 
