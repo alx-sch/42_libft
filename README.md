@@ -35,3 +35,5 @@ Testing numerous core functions (Part 1), comparing their functionality and beha
     ```
 ## Acknowledgement
 Function descriptions are mostly based on the ones found in the [Gitbook](https://42-cursus.gitbook.io/guide/rank-00/libft) by [Laura](https://github.com/TheBrisly) and [Simon](https://github.com/Laendrun).
+
+The poject badge used is retrieved from [this repo](https://github.com/ayogun/42-project-badges) by Ali Ogun.
