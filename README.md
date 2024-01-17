@@ -5,7 +5,7 @@
 
 A custom implementation of key standard C library and other useful functions. This library serves as a toolkit for subsequent projects by providing a collection of essential functions commonly used in C programming.
 
-All functions have been tested and successfully passed `francinette --strict` testing (check out https://github.com/xicodomingues/francinette).  
+All functions have been tested via [Francinette](https://github.com/xicodomingues/francinette) and successfully passed `francinette --strict`.  
 Every function file includes a testing main at the end.
 
 ## Features
@@ -15,6 +15,64 @@ Every function file includes a testing main at the end.
 - **Character Handling:** Functions for character classification and conversion.
 - **Linked Lists:** A set of functions for creating and manipulating linked lists.
 - **Additional Utilities:** Various helper functions for general-purpose use.
+
+## Overview
+
+Functions to check and manipulate characters:
+- ft_isalpha
+- ft_isdigit
+- ft_isalnum
+- ft_isascii
+- ft_isprint
+- ft_toupper
+- ft_tolower
+
+Functions to check and manipulate strings:
+- ft_strlen
+- ft_strlcpy
+- ft_strlcat
+- ft_strchr
+- ft_strrchr
+- ft_strncmp
+- ft_strnstr
+- ft_substr
+- ft_strjoin
+- ft_strtrim
+- ft_split
+- ft_strmapi
+- ft_striteri
+  
+Functions to manipulate memory:
+- ft_calloc
+- ft_memset
+- ft_bzero
+- ft_memcpy
+- ft_memmove
+- ft_memchr
+- ft_memcmp
+- ft_strdup
+  
+Functions for numbers:
+- ft_atoi
+- ft_itoa
+
+Functions to write to a file descriptor
+- ft_putchar_fd
+- ft_putstr_fd
+- ft_putendl_fd
+- ft_putnbr_fd
+
+Functions for list manipulation:
+- ft_lstnew
+- ft_lstadd_front
+- ft_lstsize
+- ft_lstlast
+- ft_lstadd_back
+- ft_lstdelone
+- ft_lstclear
+- ft_lstiter
+- ft_lstmap
+
 
 ## Testing Libft (for selected functions)
 
