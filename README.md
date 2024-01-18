@@ -93,6 +93,6 @@ To include libft functions in other projects, follow these steps:
 - Now you can use any of the functions provided by libft in your source code.
 
 ## Acknowledgement
-Function descriptions are mostly based on the ones found in the [Gitbook](https://42-cursus.gitbook.io/guide/rank-00/libft) by [Laura](https://github.com/TheBrisly) and [Simon](https://github.com/Laendrun).
+Function descriptions are mostly based on the ones found in [this Gitbook](https://42-cursus.gitbook.io/guide/rank-00/libft) by [Laura](https://github.com/TheBrisly) and [Simon](https://github.com/Laendrun).
 
 The project badge used is retrieved from [this repo](https://github.com/ayogun/42-project-badges) by Ali Ogun.
