@@ -86,7 +86,7 @@ Testing numerous core functions (Part 1), comparing their functionality and beha
 ## How to use libft 
 To include libft functions in other projects, follow these steps:
 - Make sure libft.h and libft.a are accessible from your project. The simplest approach is to copy these files into your project's directory (the commands below assume this).
-- Include the libft header file at the top of your source code (where you want to use libft functions): `#include "libft.h`.
+- Include the libft header file at the top of your source code (where you want to use libft functions): `#include "libft.h"`.
 - Link your project with libft.a during compilation using the following command: `cc -o your_executable your_file.c  -L. -lft`.
     - The `-L` flag specifies the directory where the linker should look for libraries (in this case, the current directory).  
     - The `-lft` flag completes the library search path, instructing the linker to use a library file named libft.a (excluding the initial 'lib').
