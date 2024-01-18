@@ -73,24 +73,25 @@ Functions for list manipulation:
 - ft_lstiter
 - ft_lstmap
 
-
-## Testing Libft (for selected functions)
+## Testing libft (for selected functions)
 
 Testing numerous core functions (Part 1), comparing their functionality and behavior with the corresponding native functions.
 
 1. Place the `test_libft.c` file in the same directory as your header file (`libft.h`) and library (`libft.a`), like [this](https://github.com/alx-sch/42_libft/tree/main/testing_libft).
 
-2. Compile the program using the following command:
+2. Compile the program using the following command: `cc -o testing_libft test_libft.c ./libft.a`
 
-    ```bash
-    cc -o testing_libft test_libft.c ./libft.a
-    ```
+3. Execute the compiled program: `./testing_libft`
 
-3. Execute the compiled program:
+## How to use libft 
+To include libft functions in other projects, follow these steps:
+- Make sure libft.h and libft.a are accessible from your project. The simplest approach is to copy these files into your project's directory (the commands below assume this).
+- Include the libft header file at the top of your source code (where you want to use libft functions): `#include "libft.h`.
+- Link your project with libft.a during compilation using the following command: `cc -o your_executable your_file.c  -L. -lft`.
+    - The `-L` flag specifies the directory where the linker should look for libraries (in this case, the current directory).  
+    - The `-lft` flag completes the library search path, instructing the linker to use a library file named libft.a (excluding the initial 'lib').
+- Now you can use any of the functions provided by libft in your source code.
 
-    ```bash
-    ./testing_libft
-    ```
 ## Acknowledgement
 Function descriptions are mostly based on the ones found in the [Gitbook](https://42-cursus.gitbook.io/guide/rank-00/libft) by [Laura](https://github.com/TheBrisly) and [Simon](https://github.com/Laendrun).
 
