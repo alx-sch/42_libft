@@ -6,13 +6,18 @@
 #    By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/13 11:41:06 by aschenk           #+#    #+#              #
-#    Updated: 2024/01/20 20:13:53 by aschenk          ###   ########.fr        #
+#    Updated: 2024/01/20 20:58:29 by aschenk          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME =			libft.a
 CC =			cc
 CFLAGS =		-Wall -Wextra -Werror
+
+# Macros
+## FOR GET_NEXT_LINE()
+BUFFER_SIZE ?= 42
+FD_SIZE ?= 1024
 
 SRCS =			ft_isalpha.c \
 				ft_isdigit.c \
@@ -80,6 +85,10 @@ fclean:	clean
 
 # Target 're' depends on 'fclean' and 'all', rebuilding the project from scratch.
 re:	fclean all
+
+# Rule to compile .c files to .o files with specified macros.
+%.o: %.c
+	$(CC) $(CFLAGS) -D BUFFER_SIZE=$(BUFFER_SIZE) -D FD_SIZE=$(FD_SIZE) -c $< -o $@
 
 # Marking rules as 'phony' to ensure that 'make' doesn't misinterpret them as files.
 .PHONY: all clean fclean re

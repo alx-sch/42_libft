@@ -6,7 +6,7 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 11:55:49 by aschenk           #+#    #+#             */
-/*   Updated: 2024/01/20 20:12:26 by aschenk          ###   ########.fr       */
+/*   Updated: 2024/01/20 21:04:12 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,22 +23,6 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }	t_list;
-
-// FOR GET_NEXT_LINE()
-// Default value of 42 for BUFFER_SIZE if not defined during compilation
-# ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 42
-# endif
-
-// FOR GET_NEXT_LINE()
-// Default value of 1024 for available file descriptors.
-// You can check the actual number via 'cat /proc/sys/fs/file-max';
-// it's a staggering '9223372036854775807' on my system!
-// It is a stretch to allocate an array with this amount of entries, but if
-// need be, you can easily adjust while compiling via the '-D FD_SIZE_=n' flag.
-# ifndef FD_SIZE
-#  define FD_SIZE 1024
-# endif
 
 // Core Functions
 int		ft_isalpha(int c);
