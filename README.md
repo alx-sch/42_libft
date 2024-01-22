@@ -11,10 +11,9 @@ Every function file includes a testing main at the end.
 ## Features
 
 - **Memory Management:** Efficient memory allocation and deallocation functions.
-- **String Manipulation:** Custom implementations of standard string-handling functions.
-- **Character Handling:** Functions for character classification and conversion.
+- **String Manipulation:** Custom implementations of string-handling functions.
 - **Linked Lists:** A set of functions for creating and manipulating linked lists.
-- **Additional Utilities:** Various helper functions for general-purpose use.
+- **Continuously Updated**: This repository is a work in progress and will be regularly updated with improvements and additional functionalities.
 
 ## Overview
 
