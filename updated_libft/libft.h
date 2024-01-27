@@ -6,7 +6,7 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 11:55:49 by aschenk           #+#    #+#             */
-/*   Updated: 2024/01/20 21:04:12 by aschenk          ###   ########.fr       */
+/*   Updated: 2024/01/27 17:23:04 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <unistd.h> // read()
 # include <stddef.h> // size_t
 # include <stdint.h> // SIZE_MAX
+# include <stdarg.h> // variadic fcts
 
 typedef struct s_list
 {
@@ -75,8 +76,16 @@ void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *),
 			void (*del)(void *));
 
-// Functions From Other Projects
+//// Functions From Other Projects
+// Used in get_next_line:
 int		ft_isbinary(char *stash);
 char	*get_next_line(int fd);
+// ft_printf(); fcts from ft_printf_utils listed here
+int		print_count_char(char _char);
+int		print_count_string(char *str);
+int		print_count_unsigned(unsigned int nbr);
+int		print_count_number(int nbr);
+int		print_count_hex(uintptr_t nbr, char format);
+int		ft_printf(const char *format, ...);
 
 #endif
