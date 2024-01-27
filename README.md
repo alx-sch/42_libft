@@ -94,9 +94,29 @@ To include libft functions in other projects, follow these steps:
 `cc your_file.c -L. -lft -o your_program`
     - The `-L` flag specifies the directory where the linker should look for libraries (in this case, the current directory).  
     - The `-lft` flag completes the library search path, instructing the linker to use a library file named libft.a (as the initial 'lib' is excluded, the library name to use in the flag is 'ft').
-    - Alternatively, you can also link explicitly: `cc your_file.c libft.a -o your_program`.
+    - Alternatively, you can just link explicitly: `cc your_file.c libft.a -o your_program`.
 - Please note that macros, such as 'BUFFER_SIZE' in [get_next_line](https://github.com/alx-sch/42_get_next_line), are "baked into" the implementation of respective functions during the compilation of libft.a. If necessary, ensure to override default values for macros during the compilation of libft.a, e.g.: `make BUFFER_SIZE=999`.
 - Now you can use any of the functions provided by libft in your source code.
+
+## How to update libft
+Adding new functions to libft is an efficient way to save time, minimize redundancies, and maintain code coherence. Follow these steps for a seamless update: 
+#### **1. Makefile** 
+- Utilize the `SRCS = $(wildcard *.c)` statement in your Makefile. This automatically includes every .c file found in the root directory for compiling the library and eliminates the need to manually update a list of source files.
+- If your new function supports flags, make sure to add default values and to update the compilation rule for object files. For example:  
+    ```
+    BUFFER_SIZE ?= 42
+    FD_SIZE ?= 1024
+
+    %.o: %.c
+	    $(CC) $(CFLAGS) -D BUFFER_SIZE=$(BUFFER_SIZE) -D FD_SIZE=$(FD_SIZE) -c $< -o $@
+    ```
+#### **2. libft.h** 
+- Ensure that you include any new package dependencies (e.g. `# include <stdarg.h>`).
+- Make sure to include any new package dependcies (e.g. `<stdarg.h>`). Also, add the prototypes of the function to be added here, as well as any utility function that is not included within this 'parent' function's source file.
+#### **3. C Files**  
+- Don't forget to to update the header used in the source files to be added to libft (`#include "libft.h"`)
+
+Et voila! A newly compiled libft.a will include the added functions now!
 
 ## Acknowledgement
 - Function descriptions are mostly based on the ones found in [this Gitbook](https://42-cursus.gitbook.io/guide/rank-00/libft) by [Laura](https://github.com/TheBrisly) and [Simon](https://github.com/Laendrun).
