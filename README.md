@@ -18,63 +18,64 @@ Every function file includes a testing main at the end.
 ## Overview
 
 Functions to check and manipulate characters:
-- ft_isalpha
-- ft_isdigit
-- ft_isalnum
-- ft_isascii
-- ft_isprint
-- ft_toupper
-- ft_tolower
+- ft_isalpha()
+- ft_isdigit()
+- ft_isalnum()
+- ft_isascii()
+- ft_isprint()
+- ft_toupper()
+- ft_tolower()
 
 Functions to check and manipulate strings:
-- ft_strlen
-- ft_strlcpy
-- ft_strlcat
-- ft_strchr
-- ft_strrchr
-- ft_strncmp
-- ft_strnstr
-- ft_substr
-- ft_strjoin
-- ft_strtrim
-- ft_split
-- ft_strmapi
-- ft_striteri
+- ft_strlen()
+- ft_strlcpy()
+- ft_strlcat()
+- ft_strchr()
+- ft_strrchr()
+- ft_strncmp()
+- ft_strnstr()
+- ft_substr()
+- ft_strjoin()
+- ft_strtrim()
+- ft_split()
+- ft_strmapi()
+- ft_striteri()
   
 Functions to manipulate memory:
-- ft_calloc
-- ft_memset
-- ft_bzero
-- ft_memcpy
-- ft_memmove
-- ft_memchr
-- ft_memcmp
-- ft_strdup
+- ft_calloc()
+- ft_memset()
+- ft_bzero()
+- ft_memcpy()
+- ft_memmove()
+- ft_memchr()
+- ft_memcmp()
+- ft_strdup()
   
 Functions for numbers:
-- ft_atoi
-- ft_itoa
+- ft_atoi()
+- ft_itoa()
 
 Functions to write to a file descriptor
-- ft_putchar_fd
-- ft_putstr_fd
-- ft_putendl_fd
-- ft_putnbr_fd
+- ft_putchar_fd()
+- ft_putstr_fd()
+- ft_putendl_fd()
+- ft_putnbr_fd()
 
 Functions for list manipulation:
-- ft_lstnew
-- ft_lstadd_front
-- ft_lstsize
-- ft_lstlast
-- ft_lstadd_back
-- ft_lstdelone
-- ft_lstclear
-- ft_lstiter
-- ft_lstmap
+- ft_lstnew()
+- ft_lstadd_front()
+- ft_lstsize()
+- ft_lstlast()
+- ft_lstadd_back()
+- ft_lstdelone()
+- ft_lstclear()
+- ft_lstiter()
+- ft_lstmap()
 
-[UPDATES](https://github.com/alx-sch/42_libft/tree/main/updated_libft) (outside the scope of the libft project):
-- ft_isbinary
-- [get_next_line](https://github.com/alx-sch/42_get_next_line)
+**[UPDATES](https://github.com/alx-sch/42_libft/tree/main/updated_libft)** (outside the scope of the libft project):
+- [ft_printf()](https://github.com/alx-sch/42_printf)
+- ft_isbinary()
+- [get_next_line()](https://github.com/alx-sch/42_get_next_line)
 
 ## Testing libft (for selected functions)
 
@@ -100,7 +101,7 @@ To include libft functions in other projects, follow these steps:
 
 ## How to update libft
 Adding new functions to libft is an efficient way to save time, minimize redundancies, and maintain code coherence. Follow these steps for a seamless update: 
-#### **1. Makefile** 
+#### **1. Makefile:** 
 - Utilize the `SRCS = $(wildcard *.c)` statement in your Makefile. This automatically includes every .c file found in the root directory for compiling the library and eliminates the need to manually update a list of source files.
 - If your new function supports flags, make sure to add default values and to update the compilation rule for object files. For example:  
     ```
@@ -110,13 +111,13 @@ Adding new functions to libft is an efficient way to save time, minimize redunda
     %.o: %.c
 	    $(CC) $(CFLAGS) -D BUFFER_SIZE=$(BUFFER_SIZE) -D FD_SIZE=$(FD_SIZE) -c $< -o $@
     ```
-#### **2. libft.h** 
+#### **2. libft.h:** 
 - Ensure that you include any new package dependencies (e.g. `# include <stdarg.h>`).
-- Make sure to include any new package dependcies (e.g. `<stdarg.h>`). Also, add the prototypes of the function to be added here, as well as any utility function that is not included within this 'parent' function's source file.
-#### **3. C Files**  
-- Don't forget to to update the header used in the source files to be added to libft (`#include "libft.h"`)
+- Add prototypes for the new functions to be included. Also, include any utility functions not encapsulated within the source file of the parent function.
+#### **3. C Files:**  
+- Remember to update the header inclusion in each new source file (`#include "libft.h"`).
 
-Et voila! A newly compiled libft.a will include the added functions now!
+Et voilà! After following these steps, a freshly compiled libft.a will now incorporate the newly added functions.
 
 ## Acknowledgement
 - Function descriptions are mostly based on the ones found in [this Gitbook](https://42-cursus.gitbook.io/guide/rank-00/libft) by [Laura](https://github.com/TheBrisly) and [Simon](https://github.com/Laendrun).
