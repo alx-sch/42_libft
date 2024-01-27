@@ -100,8 +100,9 @@ To include libft functions in other projects, follow these steps:
 - Now you can use any of the functions provided by libft in your source code.
 
 ## How to update libft
-Adding new functions to libft is an efficient way to save time, minimize redundancies, and maintain code coherence. Follow these steps for a seamless update: 
-#### **1. Makefile:** 
+Adding new functions to libft is an efficient way to save time, minimize redundancies, and maintain code coherence. Follow these steps for a seamless update:  
+
+**Makefile:** 
 - Utilize the `SRCS = $(wildcard *.c)` statement in your Makefile. This automatically includes every .c file found in the root directory for compiling the library and eliminates the need to manually update a list of source files.
 - If your new function supports flags, make sure to add default values and to update the compilation rule for object files. For example:  
     ```
@@ -111,10 +112,12 @@ Adding new functions to libft is an efficient way to save time, minimize redunda
     %.o: %.c
 	    $(CC) $(CFLAGS) -D BUFFER_SIZE=$(BUFFER_SIZE) -D FD_SIZE=$(FD_SIZE) -c $< -o $@
     ```
-#### **2. libft.h:** 
+
+**libft.h:** 
 - Ensure that you include any new package dependencies (e.g. `# include <stdarg.h>`).
 - Add prototypes for the new functions to be included. Also, include any utility functions not encapsulated within the source file of the parent function.
-#### **3. C Files:**  
+
+**C Files:**  
 - Remember to update the header inclusion in each new source file (`#include "libft.h"`).
 
 Et voilà! After following these steps, a freshly compiled libft.a will now incorporate the newly added functions.
