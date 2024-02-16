@@ -122,7 +122,7 @@ To use libft functions in other projects, follow these steps:
 Now you can use any of the functions provided by libft in your source code.
 
 ## Integrating the Updated Libft into a Project
-To incorporate the ['updated libft'](https://github.com/alx-sch/42_libft/tree/main/updated_libft) into your project, ensure that your project directory structure includes at least a 'src' directory. Inside the 'src' directory, all libft-related files should be placed within a folder named 'libft'. Feel free to include additional folders or directories according to your project's requirements:
+To incorporate the ['updated libft'](https://github.com/alx-sch/42_libft/tree/main/updated_libft) into your project, ensure that your project directory structure includes at least a 'src' directory. Inside this directory, all libft-related files should be placed within a folder named 'libft'. Feel free to include additional folders or directories according to your project's requirements:
 ```css
 project_root/
 │
