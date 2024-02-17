@@ -117,7 +117,7 @@ To use libft functions in other projects, follow these steps:
 	- `cc your_file.c -L. -lft -o your_program`
 		- The `-L` flag specifies the directory where the linker should look for libraries (in this case, the current directory).  
    		- The `-lft` flag completes the library search path, instructing the linker to use a library file named libft.a (as the initial 'lib' is excluded, the library name to use in the flag is 'ft').
-- **Override Macros:** Please note that macros are "baked into" the implementation of respective functions during the compilation of libft.a. If necessary, override default macro values during compilation, such as BUFFER_SIZE in get_next_line(), e.g.: `make BUFFER_SIZE=999`.
+- **Override Macros:** Macros are "baked into" the implementation of respective functions during the compilation of libft.a. If necessary, override default macro values during compilation, such as BUFFER_SIZE in get_next_line(), e.g.: `make BUFFER_SIZE=999`.
 
 Now you can use any of the functions provided by libft in your source code.
 
