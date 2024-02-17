@@ -139,7 +139,7 @@ project_root/
 │ 
 └── Makefile
 ```
-The libft Makefile generates object files and the 'libft.a' library, placing them in a folder named 'obj/libft'. It also implements a progress bar during compilation and tracks dependencies to ensure that recompilation occurs only when source files or the header file are changed
+The libft Makefile generates object files and the 'libft.a' library, placing them in a folder named 'obj/libft'. It also implements a progress bar during compilation and tracks dependencies to ensure that recompilation occurs only when source files or the header file are changed.
 
 For a practical demonstration, you can refer to the [push_swap project](https://github.com/alx-sch/42_push_swap). 
  Here, the project Makefile first generates 'libft.a' and then utilizes it during the compilation of the program.
