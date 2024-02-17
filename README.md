@@ -103,7 +103,7 @@ Adding new functions to libft is an efficient way to save time, minimize redunda
 - Add prototypes for the new functions to be included. Also, include any utility functions not encapsulated within the source file of the parent function.
 
 #### **3. C Files:**  
-- Update the header inclusion in each new source file (`#include "libft.h"`) or
+- Update the header inclusion in each new source file (`#include "libft.h"`)
 - Add the new source files to the root directory of libft.
 
 Et voilà! After following these steps, a freshly compiled libft.a will now incorporate the newly added functions.
@@ -113,7 +113,7 @@ To use libft functions in other projects, follow these steps:
 - **Ensure Accessibility:** Make sure libft.h and libft.a are accessible from your project. You can achieve this by copying these files into your project's directory.
 - **Include Header File:** To utilize libft functions in your source code, include the libft header file by adding `#include "libft.h"` at the beginning of your source file.
 - **Linking:** During compilation, link your project with libft.a using the appropriate linker flags. You can either specify the library directory and name explicitly or use the `-lft` flag:
-	- `cc your_file.c libft.a -o your_program`. 
+	- `cc your_file.c libft.a -o your_program`. or
 	- `cc your_file.c -L. -lft -o your_program`
 		- The `-L` flag specifies the directory where the linker should look for libraries (in this case, the current directory).  
    		- The `-lft` flag completes the library search path, instructing the linker to use a library file named libft.a (as the initial 'lib' is excluded, the library name to use in the flag is 'ft').
