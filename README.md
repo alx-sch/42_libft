@@ -103,7 +103,7 @@ Adding new functions to libft is an efficient way to save time, minimize redunda
 - Add prototypes for the new functions to be included. Also, include any utility functions not encapsulated within the source file of the parent function.
 
 #### **3. C Files:**  
-- Update the header inclusion in each new source file (`#include "libft.h"`).
+- Update the header inclusion in each new source file (`#include "libft.h"`) or
 - Add the new source files to the root directory of libft.
 
 Et voilà! After following these steps, a freshly compiled libft.a will now incorporate the newly added functions.
