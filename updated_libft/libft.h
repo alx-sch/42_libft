@@ -6,14 +6,14 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 11:55:49 by aschenk           #+#    #+#             */
-/*   Updated: 2024/02/21 21:01:25 by aschenk          ###   ########.fr       */
+/*   Updated: 2024/03/13 13:07:35 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdlib.h> // malloc(), free(), exit()
+# include <stdlib.h> // malloc()
 # include <unistd.h> // read()
 # include <stddef.h> // size_t
 # include <stdint.h> // SIZE_MAX
@@ -77,7 +77,10 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *),
 			void (*del)(void *));
 
 //// Functions From Other Projects
-// Used in get_next_line:
+// Just useful in general
+int		ft_strcmp(const char *s1, const char *s2);
+
+// Used in get_next_line
 int		ft_isbinary(char *stash);
 char	*get_next_line(int fd);
 // ft_printf(); fcts from ft_printf_utils listed here
