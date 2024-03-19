@@ -6,7 +6,7 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 16:58:52 by aschenk           #+#    #+#             */
-/*   Updated: 2023/11/22 18:59:33 by aschenk          ###   ########.fr       */
+/*   Updated: 2024/03/19 14:57:49 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
+#include <stdint.h>
 
 ////////////////////////
 ///// TESTING FCTs /////
