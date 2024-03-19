@@ -89,7 +89,7 @@ Test the functionality and behavior of numerous core functions (Part 1) by compa
 Adding new functions to libft is an efficient way to save time, minimize redundancies, and maintain code coherence. Follow these steps for a seamless update:  
 
 #### **1. Makefile:** 
-- Use the `SRCS = $(wildcard *.c)` statement in your Makefile. This automatically includes every .c file found in the root directory for compiling the library, eliminating the need to manually update a list of source files.
+- In your Makefile, remember to explicitly list any new source files. Unfortunately, due to 42's Norm, wildcards cannot be utilized for this purpose.
 - If your new function supports flags, make sure to add default values and to update the compilation rule for object files. For example: 
     ```
     BUFFER_SIZE ?= 42
