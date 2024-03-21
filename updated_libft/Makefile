@@ -6,7 +6,7 @@
 #    By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/13 11:41:06 by aschenk           #+#    #+#              #
-#    Updated: 2024/03/19 14:54:51 by aschenk          ###   ########.fr        #
+#    Updated: 2024/03/21 15:21:43 by aschenk          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -67,7 +67,6 @@ SRCS =			ft_isalpha.c \
 				get_next_line_bonus.c \
 				ft_printf_utils.c \
 				ft_printf.c
-
 OBJS :=		$(SRCS:%.c=../../obj/libft/%.o)
 HDRS := 	libft.h
 
@@ -107,7 +106,6 @@ $(NAME):	$(OBJS)
 
 # Target 'clean' removes object files.
 clean:
-	@$(eval SRC_NUM := $(words $(wildcard ../../obj/libft/*.o)))
 	@rm -f $(OBJS)
 	@echo "$(BOLD)$(RED)Object files cleaned."
 
