@@ -6,11 +6,11 @@
 #    By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/13 11:41:06 by aschenk           #+#    #+#              #
-#    Updated: 2024/04/09 15:09:44 by aschenk          ###   ########.fr        #
+#    Updated: 2024/04/12 17:48:46 by aschenk          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME =		../../obj/libft/libft.a
+NAME =		libft.a
 CC =		cc
 CFLAGS =	-Wall -Wextra -Werror
 
@@ -67,7 +67,7 @@ SRCS =			ft_isalpha.c \
 				get_next_line_bonus.c \
 				ft_printf_utils.c \
 				ft_printf.c
-OBJS :=		$(SRCS:%.c=../../obj/libft/%.o)
+OBJS :=		$(SRCS:%.c=obj/%.o)
 HDRS := 	libft.h
 
 # Define the total number of sorce files.
@@ -86,7 +86,7 @@ all:	$(NAME)
 
 # Rule to compile .c files to .o files with specified macros.
 # Prints progress bar.
-../../obj/libft/%.o: %.c $(HDRS)
+obj/%.o: %.c $(HDRS)
 	@mkdir -p $(@D)
 	@$(eval SRC_NUM := $(shell expr $(SRC_NUM) + 1))
 	@$(eval PERCENT := $(shell printf "%.0f" $(shell echo "scale=4; $(SRC_NUM) / $(TOTAL_SRCS) * 100" | bc)))
@@ -113,7 +113,7 @@ clean:
 # Target 'fclean' depends on 'clean' and removes the library as well.
 fclean:	clean
 	@rm -f $(NAME)
-	@rm -rf ../../obj/libft
+	@rm -rf obj
 	@echo "$(BOLD)$(RED)Libft library removed.$(RESET)"
 	@$(eval SRC_NUM := 0)
 
