@@ -6,9 +6,11 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/20 19:35:30 by aschenk           #+#    #+#             */
-/*   Updated: 2024/04/12 15:31:32 by aschenk          ###   ########.fr       */
+/*   Updated: 2024/04/12 17:23:48 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*
 To handle the reading of binary data in a more controlled way, ft_isbinary()
@@ -18,9 +20,6 @@ end-of-file (EOF). If the binary data check was successful (i.e., if
 non-printable characters or a single NULL terminator was found without an EOF
 indication), '1' is returned, otherwise '0'.
 */
-
-#include "libft.h"
-
 int	ft_isbinary(char *stash)
 {
 	size_t	i;

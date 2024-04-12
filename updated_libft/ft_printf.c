@@ -6,7 +6,7 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 23:43:10 by aschenk           #+#    #+#             */
-/*   Updated: 2024/01/27 17:18:23 by aschenk          ###   ########.fr       */
+/*   Updated: 2024/04/12 17:30:06 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,9 +87,9 @@ static int	print_count_specifier(const char specifier, va_list args)
 /*
 A simplified implementation of the printf function in C.
 
-@format:	A format string containing placeholders for various data types.
+- format:	A format string containing placeholders for various data types.
 			Supported format specif ers: 'c', 's', 'p', 'd', 'i', 'u', 'x', 'X', '%'.
-@...:		Variable arguments to be formatted according to the format string.
+- ...:	Variable arguments to be formatted according to the format string.
 
 Returns:	The total length of characters printed.  In case of an error, indicated
 			by the absence of any specifier or when only whitespace follows a '%',

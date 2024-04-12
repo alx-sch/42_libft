@@ -6,9 +6,11 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 14:48:45 by aschenk           #+#    #+#             */
-/*   Updated: 2024/02/15 19:11:40 by aschenk          ###   ########.fr       */
+/*   Updated: 2024/04/12 17:23:15 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*
 calloc() functions similarly to malloc(); however, it distinguishes itself by
@@ -20,9 +22,6 @@ calloc() function is specified to always return a valid pointer that can be
 safely used to access elements (even when the number of elements is 0).
 It essentially provides a valid, empty block of memory.
 */
-
-#include "libft.h"
-
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*ptr;

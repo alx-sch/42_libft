@@ -6,9 +6,11 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 10:33:40 by aschenk           #+#    #+#             */
-/*   Updated: 2023/11/24 19:21:52 by aschenk          ###   ########.fr       */
+/*   Updated: 2024/04/12 17:28:15 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*
 The memcpy function efficiently copies up to 'n' bytes from the source (src) to
@@ -17,9 +19,6 @@ distinguishes itself by accepting void * as parameters. Consequently, memcpy()
 accommodates copying of data pointed to by any type of pointer, offering a
 versatile and adaptable copying mechanism.
 */
-
-#include "libft.h"
-
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	size_t		i;

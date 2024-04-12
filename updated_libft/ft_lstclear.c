@@ -6,18 +6,17 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/30 17:35:36 by aschenk           #+#    #+#             */
-/*   Updated: 2023/12/01 16:42:28 by aschenk          ###   ########.fr       */
+/*   Updated: 2024/04/12 17:25:45 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*
 Deletes and frees the given node and every successor of that node, using the
 function ’del’ and free(3). Finally, the pointer to the list must be set
 to NULL.
 */
-
-#include "libft.h"
-
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*next_node;

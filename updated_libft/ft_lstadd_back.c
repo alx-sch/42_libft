@@ -6,14 +6,13 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 16:17:27 by aschenk           #+#    #+#             */
-/*   Updated: 2023/11/30 18:05:13 by aschenk          ###   ########.fr       */
+/*   Updated: 2024/04/12 17:25:29 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Adds the node ’new’ at the end of the list.
-
 #include "libft.h"
 
+// Adds the node ’new’ at the end of the list.
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*current;

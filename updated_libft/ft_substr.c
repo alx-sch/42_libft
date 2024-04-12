@@ -6,9 +6,11 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 13:47:01 by aschenk           #+#    #+#             */
-/*   Updated: 2024/02/21 21:01:25 by aschenk          ###   ########.fr       */
+/*   Updated: 2024/04/12 17:35:44 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*
 ft_substr() returns a substring of the string s passed as parameter.
@@ -22,9 +24,6 @@ start index and adjusts the length parameter if it exceeds the remaining length.
 Finally, the function allocates memory for a substring, copies the appropriate
 portion from the input string, and returns the newly allocated substring.
 */
-
-#include "libft.h"
-
 char	*ft_substr(const char *s, unsigned int start, size_t len)
 {
 	char	*substr;

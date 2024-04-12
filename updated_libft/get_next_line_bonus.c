@@ -6,7 +6,7 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 14:02:36 by aschenk           #+#    #+#             */
-/*   Updated: 2024/01/20 20:04:58 by aschenk          ###   ########.fr       */
+/*   Updated: 2024/04/12 17:38:32 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -161,7 +161,8 @@ Read data is appended to a string ('stash') until either a newline character
 or the EOF is encountered. This 'stash' is maintained as static storage,
 which accumulates reads between function calls (the size of reads is defined
 by BUFFER_SIZE).
-A complete line (meaning until '\n' or EOF) is extracted from the
+
+A complete line (meaning until '\\n' or EOF) is extracted from the
 'stash'. Afterward, the 'stash' is trimmed so it only contains content after
 the newline character, which will be stored and used in the next function call.
 
@@ -180,7 +181,6 @@ Returns:
 	- If an error occurs, if the EOF is reached, or if the file is binary,
 	  NULL is returned.
 */
-
 char	*get_next_line(int fd)
 {
 	char		*line;

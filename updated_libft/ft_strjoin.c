@@ -6,9 +6,11 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 15:02:24 by aschenk           #+#    #+#             */
-/*   Updated: 2024/02/21 21:01:25 by aschenk          ###   ########.fr       */
+/*   Updated: 2024/04/12 17:34:27 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*
 This function operates similarly to ft_strlcat(), but instead of requiring a
@@ -24,9 +26,6 @@ calculated using ft_strlen. The resulting concatenated string is allocated
 enough memory, and the content of s1 and s2 are copied to this memory using
 ft_memcpy(). The newly created string is then returned.
 */
-
-#include "libft.h"
-
 char	*ft_strjoin(const char *s1, const char *s2)
 {
 	int		len1;

@@ -6,9 +6,11 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 16:39:13 by aschenk           #+#    #+#             */
-/*   Updated: 2023/11/27 17:24:19 by aschenk          ###   ########.fr       */
+/*   Updated: 2024/04/12 17:34:11 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*
 Works like ft_strmapi() with the difference that ft_striteri() applies function
@@ -16,9 +18,6 @@ f directly on the original string.
 Passing the address (a pointer) as to modify the actual memory location of the
 index / char.
 */
-
-#include "libft.h"
-
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	unsigned int	i;

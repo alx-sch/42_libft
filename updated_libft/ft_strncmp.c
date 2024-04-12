@@ -6,9 +6,11 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 17:21:01 by aschenk           #+#    #+#             */
-/*   Updated: 2024/02/12 20:23:58 by aschenk          ###   ########.fr       */
+/*   Updated: 2024/04/12 17:35:13 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*
 The strncmp() function performs a lexicographic comparison of two strings by
@@ -23,9 +25,6 @@ first difference encountered.
 -	If the first differing character in s2 is less than the character at the
 	same position in s1, the result is positive.
 */
-
-#include "libft.h"
-
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;

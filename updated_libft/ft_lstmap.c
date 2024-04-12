@@ -6,17 +6,9 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/30 18:45:06 by aschenk           #+#    #+#             */
-/*   Updated: 2023/12/01 17:53:18 by aschenk          ###   ########.fr       */
+/*   Updated: 2024/04/12 17:26:47 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/*
-This functions works similarly as the ft_lstiter function, but it creates a new
-list resulting of the successive applications of f on each element's content.
-
-ft_lstmapclear() is only used to for the sole purpose of making ft_lstmap() one
-line shorter and thus Norminette-conform ;)
-*/
 
 #include "libft.h"
 
@@ -26,6 +18,10 @@ static void	ft_lstmapclear(t_list *result, void (*del)(void *), void *temp)
 	del(temp);
 }
 
+/*
+This functions works similarly as the ft_lstiter function, but it creates a new
+list resulting of the successive applications of f on each element's content.
+*/
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new;

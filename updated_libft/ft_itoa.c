@@ -6,28 +6,21 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 19:29:56 by aschenk           #+#    #+#             */
-/*   Updated: 2023/12/05 11:39:49 by aschenk          ###   ########.fr       */
+/*   Updated: 2024/04/12 17:25:15 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 The ft_itoa function performs the inverse operation of ft_atoi, converting a
 numerical value into its corresponding string representation.
-
-ft_count_digits():
-Counts number of digits (incl. '-') in an int. The purpose is to determine the
-number of characters needed to represent the integer as a string.
-
-ft_itoa():
-Allocates memory for the string based on the count of digits plus one additional
-char for '\0'. Converts 'int' to 'char' digit by digit from right to left and
-fills the string accordingly.
-Handles special cases "INT_MIN" (as (INT_MIN *= -1) > INT_MAX) and '0' by
-directly creating the string via ft_strdup().
 */
 
 #include "libft.h"
 
+/*
+Counts number of digits (incl. '-') in an int. The purpose is to determine the
+number of characters needed to represent the integer as a string.
+*/
 static int	ft_count_digits(int n)
 {
 	int	i;
@@ -46,6 +39,13 @@ static int	ft_count_digits(int n)
 	return (i);
 }
 
+/*
+Allocates memory for the string based on the count of digits plus one additional
+char for '\0'. Converts 'int' to 'char' digit by digit from right to left and
+fills the string accordingly.
+Handles special cases "INT_MIN" (as (INT_MIN *= -1) > INT_MAX) and '0' by
+directly creating the string via ft_strdup().
+*/
 char	*ft_itoa(int n)
 {
 	char	*str;

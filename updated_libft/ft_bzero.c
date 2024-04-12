@@ -6,18 +6,17 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 14:21:44 by aschenk           #+#    #+#             */
-/*   Updated: 2024/02/13 10:26:09 by aschenk          ###   ########.fr       */
+/*   Updated: 2024/04/12 17:23:04 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*
 This function operates similarly to the memset() function, with the distinction
 that it automatically writes the NUL character (ASCII: 0) without requiring you
 to explicitly specify it. Notably, bzero() does not return any value.
 */
-
-#include "libft.h"
-
 void	ft_bzero(void *s, size_t n)
 {
 	unsigned char	*ptr;

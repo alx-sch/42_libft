@@ -6,9 +6,11 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 14:36:31 by aschenk           #+#    #+#             */
-/*   Updated: 2024/02/13 09:36:54 by aschenk          ###   ########.fr       */
+/*   Updated: 2024/04/12 17:35:21 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*
 The strnstr() function operates similarly to strchr(), but with a notable
@@ -17,9 +19,6 @@ given range, strnstr() specifically searches for the presence of an entire
 substring (a sequence of characters) within the first 'len' characters of the
 haystack, rather than just a single character
 */
-
-#include "libft.h"
-
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	i;

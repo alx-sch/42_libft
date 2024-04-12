@@ -6,9 +6,11 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 09:35:00 by aschenk           #+#    #+#             */
-/*   Updated: 2023/11/24 19:21:26 by aschenk          ###   ########.fr       */
+/*   Updated: 2024/04/12 17:27:44 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*
 The memchr() function operates similarly to strchr(), with the distinction that
@@ -28,9 +30,6 @@ contingent on the compiler and platform. In contexts involving raw memory or
 byte-wise operations, treating characters as unsigned is a common practice to
 prevent unforeseen issues that may arise during value comparisons.
 */
-
-#include "libft.h"
-
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	size_t	i;

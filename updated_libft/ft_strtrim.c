@@ -6,9 +6,11 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 15:33:31 by aschenk           #+#    #+#             */
-/*   Updated: 2024/02/21 21:01:25 by aschenk          ###   ########.fr       */
+/*   Updated: 2024/04/12 17:35:36 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*
 The ft_strtrim() function trims the input string s1 by removing the characters
@@ -23,9 +25,6 @@ set string.
  in the set string. Finally, it returns a newly allocated substring containing
  the trimmed portion of the original string.
 */
-
-#include "libft.h"
-
 char	*ft_strtrim(const char *s1, const char *set)
 {
 	char	*strtim;

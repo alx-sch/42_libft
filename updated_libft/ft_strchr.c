@@ -6,9 +6,11 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 13:44:08 by aschenk           #+#    #+#             */
-/*   Updated: 2023/11/24 19:22:31 by aschenk          ###   ########.fr       */
+/*   Updated: 2024/04/12 17:33:40 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*
 The strchr() function is designed to locate a specific character within a string.
@@ -18,9 +20,6 @@ found, the function returns NULL.
 It's important to note that if the character being searched for is '\0',
 the function still needs to return a pointer pointing to this character.
 */
-
-#include "libft.h"
-
 char	*ft_strchr(const char *s, int c)
 {
 	char	char_c;

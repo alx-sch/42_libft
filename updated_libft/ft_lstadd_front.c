@@ -6,17 +6,16 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 16:29:30 by aschenk           #+#    #+#             */
-/*   Updated: 2023/12/01 16:10:04 by aschenk          ###   ########.fr       */
+/*   Updated: 2024/04/12 17:25:38 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*
 This function allows us to add a new element to the beginning of a given list.
 It takes in both the new element and the existing list as inputs.
 */
-
-#include "libft.h"
-
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	if (lst == NULL || new == NULL)

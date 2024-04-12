@@ -6,17 +6,16 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 16:55:37 by aschenk           #+#    #+#             */
-/*   Updated: 2023/12/01 16:39:40 by aschenk          ###   ########.fr       */
+/*   Updated: 2024/04/12 17:25:52 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*
 This function takes a list element as parameter and deletes its content as well
 as free the allocated memory using the del function passed as parameter too.
 */
-
-#include "libft.h"
-
 void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
 	if (lst == NULL || del == NULL)

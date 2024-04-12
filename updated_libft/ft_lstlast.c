@@ -6,14 +6,13 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 15:55:17 by aschenk           #+#    #+#             */
-/*   Updated: 2023/11/30 18:04:43 by aschenk          ###   ########.fr       */
+/*   Updated: 2024/04/12 17:26:12 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Returns the last node of the list.
-
 #include "libft.h"
 
+// Returns the last node of the list.
 t_list	*ft_lstlast(t_list *lst)
 {
 	t_list	*current;

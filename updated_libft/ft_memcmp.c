@@ -6,12 +6,13 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 11:06:07 by aschenk           #+#    #+#             */
-/*   Updated: 2024/01/20 20:21:19 by aschenk          ###   ########.fr       */
+/*   Updated: 2024/04/12 17:27:53 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
+#include "libft.h"
 
+/*
 memcmp() is a function designed for comparing byte strings, functioning in a
 manner similar to strncmp(). Notably, memcmp() operates on void pointers,
 facilitating its use with byte strings. Its distinctive feature lies in the
@@ -26,9 +27,6 @@ The return value of memcmp() hinges on the nature of the differences detected:
 -	If the first differing character in s2 is less than the character at the same
 	position in s1, the result will be positive.
 */
-
-#include "libft.h"
-
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	size_t				i;

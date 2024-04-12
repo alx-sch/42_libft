@@ -6,7 +6,7 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 11:55:49 by aschenk           #+#    #+#             */
-/*   Updated: 2024/03/19 14:58:17 by aschenk          ###   ########.fr       */
+/*   Updated: 2024/04/12 17:40:50 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ typedef struct s_list
 }	t_list;
 
 // Core Functions
+
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
@@ -52,6 +53,7 @@ void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_strdup(const char *s);
 
 // Secondary Functions
+
 char	*ft_substr(const char *s, unsigned int start, size_t len);
 char	*ft_strjoin(const char *s1, const char *s2);
 char	*ft_strtrim(const char *s1, const char *set);
@@ -65,6 +67,7 @@ void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 
 // Bonus Functions
+
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);
 int		ft_lstsize(t_list *lst);
@@ -78,14 +81,18 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *),
 
 //// Functions From Other Projects
 // Just useful in general
+
 int		ft_strcmp(const char *s1, const char *s2);
 
 // Used in get_next_line
+
 int		ft_isbinary(char *stash);
 char	*get_next_line(int fd);
 
 int		ft_printf(const char *format, ...);
+
 // ft_printf(); fcts from ft_printf_utils listed here
+
 int		print_count_char(char _char);
 int		print_count_string(char *str);
 int		print_count_unsigned(unsigned int nbr);

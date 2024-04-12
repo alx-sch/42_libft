@@ -6,18 +6,17 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 13:17:00 by aschenk           #+#    #+#             */
-/*   Updated: 2024/02/15 14:28:09 by aschenk          ###   ########.fr       */
+/*   Updated: 2024/04/12 17:34:54 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*
 Computes the length of the null-terminated string str.
 The function returns the number of characters in the string str, excluding
 the NUL terminator ('\0').
 */
-
-#include "libft.h"
-
 size_t	ft_strlen(const char *str)
 {
 	size_t	i;

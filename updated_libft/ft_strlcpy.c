@@ -6,9 +6,11 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 13:33:08 by aschenk           #+#    #+#             */
-/*   Updated: 2024/02/15 14:14:47 by aschenk          ###   ########.fr       */
+/*   Updated: 2024/04/12 17:34:45 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*
 The purpo  se of this function is straightforward: to copy one string to another
@@ -24,9 +26,6 @@ the string it attempted to create. This length corresponds to the length of the
 source string, even in cases where the string had to be truncated to ensure
 proper NUL-termination.
 */
-
-#include "libft.h"
-
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	i;

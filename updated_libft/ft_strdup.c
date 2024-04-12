@@ -6,9 +6,11 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 15:35:33 by aschenk           #+#    #+#             */
-/*   Updated: 2023/11/24 19:23:05 by aschenk          ###   ########.fr       */
+/*   Updated: 2024/04/12 17:33:56 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*
 The strdup() function returns a pointer to a newly created string, serving as a
@@ -18,9 +20,6 @@ using malloc().
 Upon success, strdup() provides a pointer to the duplicated string. In case of
 insufficient available memory, it returns NULL.
 */
-
-#include "libft.h"
-
 char	*ft_strdup(const char *src)
 {
 	char	*new_s;

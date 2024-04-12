@@ -6,9 +6,11 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 14:33:52 by aschenk           #+#    #+#             */
-/*   Updated: 2024/02/15 19:40:24 by aschenk          ###   ########.fr       */
+/*   Updated: 2024/04/12 17:22:48 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*
 The atoi() function transforms a string into its corresponding integer
@@ -19,9 +21,6 @@ may be an optional single '+' or '-' sign. The conversion continues until the
 first character that is not a valid digit in the specified base is encountered.
 For our purposes, where we only need to handle base 10, valid digits: 0-9.
 */
-
-#include "libft.h"
-
 int	ft_atoi(const char *nptr)
 {
 	int	sign;

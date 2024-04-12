@@ -6,9 +6,11 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 10:58:59 by aschenk           #+#    #+#             */
-/*   Updated: 2023/12/01 14:25:48 by aschenk          ###   ########.fr       */
+/*   Updated: 2024/04/12 17:27:19 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*
 This function dynamically allocates memory for a new element of type t_list,
@@ -16,9 +18,6 @@ initializing its content with the provided content parameter. The next pointer
 of the newly created element is set to NULL. The function then returns the
 pointer to the newly allocated list element
 */
-
-#include "libft.h"
-
 t_list	*ft_lstnew(void *content)
 {
 	t_list	*new;

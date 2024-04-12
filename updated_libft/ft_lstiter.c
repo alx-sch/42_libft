@@ -6,16 +6,15 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/30 17:57:30 by aschenk           #+#    #+#             */
-/*   Updated: 2023/11/30 18:44:20 by aschenk          ###   ########.fr       */
+/*   Updated: 2024/04/12 17:26:03 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*
 Iterates the list ’lst’ and applies the function ’f’ on the content of each node.
 */
-
-#include "libft.h"
-
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	if (lst == NULL || f == NULL)

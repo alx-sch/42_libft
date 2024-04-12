@@ -6,14 +6,13 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 16:53:14 by aschenk           #+#    #+#             */
-/*   Updated: 2023/11/30 18:04:22 by aschenk          ###   ########.fr       */
+/*   Updated: 2024/04/12 17:27:26 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Returns the number of elements in a list.
-
 #include "libft.h"
 
+// Returns the number of elements in a list.
 int	ft_lstsize(t_list *lst)
 {
 	int	len;

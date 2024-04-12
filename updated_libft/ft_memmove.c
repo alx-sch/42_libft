@@ -6,9 +6,11 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 11:27:15 by aschenk           #+#    #+#             */
-/*   Updated: 2023/11/23 14:47:14 by aschenk          ###   ########.fr       */
+/*   Updated: 2024/04/12 17:28:26 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*
 The memmove() function performs the same task as memcpy(), but with a crucial
@@ -26,9 +28,6 @@ ensuring the proper handling of cases where src precedes dst.
 This condition evaluates to true only when src is positioned before dst,
 as a 'negative' (size_t)dest - (size_t)src is non-existent -> looping to SIZE_MAX
 */
-
-#include "libft.h"
-
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	size_t	i;

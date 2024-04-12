@@ -6,14 +6,13 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 17:44:09 by aschenk           #+#    #+#             */
-/*   Updated: 2023/11/27 17:55:46 by aschenk          ###   ########.fr       */
+/*   Updated: 2024/04/12 17:30:27 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Same as ft_putstr_fd() but also prints a newline after the string.
-
 #include "libft.h"
 
+// Same as ft_putstr_fd() but also prints a newline after the string.
 void	ft_putendl_fd(char *s, int fd)
 {
 	ft_putstr_fd(s, fd);
