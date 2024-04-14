@@ -6,12 +6,18 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 00:34:39 by aschenk           #+#    #+#             */
-/*   Updated: 2024/04/15 00:39:55 by aschenk          ###   ########.fr       */
+/*   Updated: 2024/04/15 01:12:09 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+Extracts the numerical value of a character representing a digit in a
+specified base.
+Returns the numerical value of the digit if it's valid for the base,
+otherwise returns -1.
+*/
 static int	get_digit(char c, int digit_base)
 {
 	int	max_digit;
