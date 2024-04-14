@@ -6,7 +6,7 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 11:55:49 by aschenk           #+#    #+#             */
-/*   Updated: 2024/04/12 17:40:50 by aschenk          ###   ########.fr       */
+/*   Updated: 2024/04/15 00:37:16 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,15 +83,18 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *),
 // Just useful in general
 
 int		ft_strcmp(const char *s1, const char *s2);
+int		ft_atoi_base(const char *str, int str_base);
 
-// Used in get_next_line
+// Project: get_next_line
 
 int		ft_isbinary(char *stash);
 char	*get_next_line(int fd);
 
+// Project: ft_printf
+
 int		ft_printf(const char *format, ...);
 
-// ft_printf(); fcts from ft_printf_utils listed here
+// Project: ft_printf / utils
 
 int		print_count_char(char _char);
 int		print_count_string(char *str);

@@ -6,7 +6,7 @@
 #    By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/13 11:41:06 by aschenk           #+#    #+#              #
-#    Updated: 2024/04/12 17:48:46 by aschenk          ###   ########.fr        #
+#    Updated: 2024/04/15 00:37:39 by aschenk          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,7 +66,8 @@ SRCS =			ft_isalpha.c \
 				ft_isbinary.c \
 				get_next_line_bonus.c \
 				ft_printf_utils.c \
-				ft_printf.c
+				ft_printf.c \
+				ft_atoi_base.c
 OBJS :=		$(SRCS:%.c=obj/%.o)
 HDRS := 	libft.h
 
