@@ -6,7 +6,7 @@
 #    By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/13 11:41:06 by aschenk           #+#    #+#              #
-#    Updated: 2024/04/17 13:10:25 by aschenk          ###   ########.fr        #
+#    Updated: 2024/04/17 13:16:05 by aschenk          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -108,13 +108,12 @@ $(NAME):	$(OBJS)
 
 # Target 'clean' removes object files.
 clean:
-	@rm -f $(OBJS)
+	@rm -rf obj
 	@echo "$(BOLD)$(RED)Object files cleaned.$(RESET)"
 
 # Target 'fclean' depends on 'clean' and removes the library as well.
 fclean:	clean
 	@rm -f $(NAME)
-	@rm -rf obj
 	@echo "$(BOLD)$(RED)Libft library removed.$(RESET)"
 	@$(eval SRC_NUM := 0)
 
