@@ -6,7 +6,7 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 09:35:00 by aschenk           #+#    #+#             */
-/*   Updated: 2024/04/12 17:27:44 by aschenk          ###   ########.fr       */
+/*   Updated: 2024/04/17 16:12:08 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	while (i < n)
 	{
 		if (((unsigned char *)s)[i] == (unsigned char)c)
-			return ((void *)(s + i));
+			return ((void *)((const unsigned char *)s + i));
 		i++;
 	}
 	return (NULL);
