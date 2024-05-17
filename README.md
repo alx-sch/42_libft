@@ -15,7 +15,7 @@ Each function file includes a testing main at the end.
 - **Linked Lists:** A set of functions for creating and manipulating linked lists.
 - **Continuous Updates**: This repository is a work in progress and will be regularly updated with improvements and additional functionalities.
 
-## **UPDATES**
+## Updates
 For the most up-to-date version, please check the [updated libft](https://github.com/alx-sch/42_libft/tree/main/updated_libft). 
 Functions added:
 - [ft_printf()](https://github.com/alx-sch/42_printf)
