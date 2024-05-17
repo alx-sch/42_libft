@@ -3,7 +3,7 @@
     <img src="https://github.com/alx-sch/42_libft/assets/134595144/bce87494-3c97-4028-ab66-83a48190603d" alt="libft_badge.png" />
 </p>
 
-A custom implementation of key standard C library and other useful functions. This library serves as a toolkit for subsequent projects by providing a collection of essential functions commonly used in C programming.
+A custom implementation of key standard C library and other useful functions. This library serves as a toolkit for subsequent projects by providing a collection of essential functions commonly used in C programming. Bonus included.
 
 All functions have been tested using [Francinette](https://github.com/xicodomingues/francinette) and successfully passed `francinette --strict`.  
 Each function file includes a testing main at the end.
@@ -15,67 +15,14 @@ Each function file includes a testing main at the end.
 - **Linked Lists:** A set of functions for creating and manipulating linked lists.
 - **Continuous Updates**: This repository is a work in progress and will be regularly updated with improvements and additional functionalities.
 
-## Overview
-
-#### **Character Manipulation**
-- ft_isalpha()
-- ft_isdigit()
-- ft_isalnum()
-- ft_isascii()
-- ft_isprint()
-- ft_toupper()
-- ft_tolower()
-
-#### **String Manipulation**
-- ft_strlen()
-- ft_strlcpy()
-- ft_strlcat()
-- ft_strchr()
-- ft_strrchr()
-- ft_strncmp()
-- ft_strnstr()
-- ft_substr()
-- ft_strjoin()
-- ft_strtrim()
-- ft_split()
-- ft_strmapi()
-- ft_striteri()
-  
-#### **Memory Manipulation**
-- ft_calloc()
-- ft_memset()
-- ft_bzero()
-- ft_memcpy()
-- ft_memmove()
-- ft_memchr()
-- ft_memcmp()
-- ft_strdup()
-  
-#### **Number Functions**
-- ft_atoi()
-- ft_itoa()
-
-#### **File Descriptor Outputs**
-- ft_putchar_fd()
-- ft_putstr_fd()
-- ft_putendl_fd()
-- ft_putnbr_fd()
-
-#### **List Manipulation**
-- ft_lstnew()
-- ft_lstadd_front()
-- ft_lstsize()
-- ft_lstlast()
-- ft_lstadd_back()
-- ft_lstdelone()
-- ft_lstclear()
-- ft_lstiter()
-- ft_lstmap()
-
-#### **[UPDATES](https://github.com/alx-sch/42_libft/tree/main/updated_libft)**
+## **UPDATES**
+For the most up-to-date version, please check the [updated libft](https://github.com/alx-sch/42_libft/tree/main/updated_libft). 
+Functions added:
 - [ft_printf()](https://github.com/alx-sch/42_printf)
-- ft_isbinary()
 - [get_next_line()](https://github.com/alx-sch/42_get_next_line)
+- ft_isbinary()
+- ft_atoi_base()
+- ft_strcmp()
 
 ## Testing libft (for selected functions)
 
@@ -122,29 +69,29 @@ To use libft functions in other projects, follow these steps:
 Now you can use any of the functions provided by libft in your source code.
 
 ## Integrating Libft into a Project
-To incorporate the ['updated libft'](https://github.com/alx-sch/42_libft/tree/main/updated_libft) into your project, ensure that your project directory structure includes at least a 'src' directory. Inside this directory, all libft-related files should be placed within a folder named 'libft'. Feel free to include additional folders or directories according to your project's requirements:
+You can incorporate the ['updated libft'](https://github.com/alx-sch/42_libft/tree/main/updated_libft) into your project in an elegant way by calling the libft Makefile through your project Makefile and then using libft.a for the project's compilation. Such a project structure could look like this:
 ```css
 project_root/
 │
-├── src/
-│   ├── libft/
-│   │   ├── Makefile
-│   │   ├── libft.h
-│   │   ├── ft_libft_1.c
-│   │   ├── ft_libft_2.c
-│   │	└── ..
-│   │
+├── lib/
+│   └── libft/
+│       ├── Makefile
+│       ├── libft.h
+│       ├── ft_libft_1.c
+│       ├── ft_libft_2.c
+│   	└── ..
+│ 
+├── src/  
 │   ├── project_source_1.c
 │   └── ...
 │ 
+├── .../
+│ 
 └── Makefile
 ```
-The libft Makefile generates object files and the 'libft.a' library, placing them in a folder named 'obj/libft'. It also implements a progress bar during compilation and tracks dependencies to ensure that recompilation occurs only when source files or the header file are changed.
+The libft Makefile generates object files and the 'libft.a' in the same folder. It also implements a progress bar during compilation and tracks dependencies to ensure that recompilation occurs only when source files or the header file are changed.
 
-For a practical demonstration, you can refer to the [push_swap project](https://github.com/alx-sch/42_push_swap). 
- Here, the project Makefile first generates 'libft.a' and then utilizes it during the compilation of the program.
-
-
+For a practical demonstration, feel free to refer to my [fdf project](https://github.com/alx-sch/42_fdf). 
 
 ## Acknowledgement
 - The function descriptions are mostly based on those found in [this Gitbook](https://42-cursus.gitbook.io/guide/rank-00/libft) by [Laura](https://github.com/TheBrisly) and [Simon](https://github.com/Laendrun).
