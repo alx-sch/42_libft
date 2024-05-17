@@ -6,7 +6,7 @@
 /*   By: aschenk <aschenk@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 11:55:49 by aschenk           #+#    #+#             */
-/*   Updated: 2024/04/17 16:08:05 by aschenk          ###   ########.fr       */
+/*   Updated: 2024/05/17 17:47:10 by aschenk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,18 @@
 # include <stdint.h> // SIZE_MAX
 # include <stdarg.h> // variadic fcts
 
+/*
+Used in libft functions for list manipulation.
+- void *content:	This member is a pointer to the content stored in the node.
+					The void pointer allows the structure to hold data of any
+					type. Users of this structure can store any type of data by
+					casting it to a void pointer before assigning it to
+					this member.
+- struct s_list *next:	This member is a pointer to the next node in the linked
+						list. It allows the nodes to be linked together, forming
+						a sequence. If a node is the last one in the list, this
+						pointer will be NULL to indicate the end of the list.
+*/
 typedef struct s_list
 {
 	void			*content;
