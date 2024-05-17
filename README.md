@@ -16,8 +16,9 @@ Each function file includes a testing main at the end.
 - **Continuous Updates**: This repository is a work in progress and will be regularly updated with improvements and additional functionalities.
 
 ## Updates
-For the most up-to-date version, please check the [updated libft](https://github.com/alx-sch/42_libft/tree/main/updated_libft). 
-Functions added:
+For the most up-to-date version, please check the [updated libft](https://github.com/alx-sch/42_libft/tree/main/updated_libft).    
+Functions added:  
+- A nifty compilation progress bar that shows the progress of the build process.
 - [ft_printf()](https://github.com/alx-sch/42_printf)
 - [get_next_line()](https://github.com/alx-sch/42_get_next_line)
 - ft_isbinary()
