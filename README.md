@@ -83,6 +83,7 @@ project_root/
 │   	└── ..
 │ 
 ├── src/  
+│   ├── project_header.h (includes libft.h)
 │   ├── project_source_1.c
 │   └── ...
 │ 
