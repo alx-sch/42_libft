@@ -74,12 +74,12 @@ You can incorporate the ['updated libft'](https://github.com/alx-sch/42_libft/tr
 ```css
 project_root/
 │
-├──  libft/
-│    ├── Makefile
-│    ├── libft.h
-│    ├── ft_libft_1.c
-│    ├── ft_libft_2.c
-│    └── ..
+├── libft/
+│   ├── Makefile
+│   ├── libft.h
+│   ├── ft_libft_1.c
+│   ├── ft_libft_2.c
+│   └── ...
 │ 
 ├── include/
 │   ├──  project_header.h (includes libft.h)
