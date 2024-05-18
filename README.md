@@ -74,24 +74,24 @@ You can incorporate the ['updated libft'](https://github.com/alx-sch/42_libft/tr
 ```css
 project_root/
 │
-├── libft/
-│   ├── Makefile
-│   ├── libft.h
-│   ├── ft_libft_1.c
-│   ├── ft_libft_2.c
-│   └── ...
+├──── libft/
+│     ├── Makefile
+│     ├── libft.h
+│     ├── ft_libft_1.c
+│     ├── ft_libft_2.c
+│     └── ...
 │ 
-├── include/
-│   ├──  project_header.h (includes libft.h)
-│   └── ...
+├──── include/
+│     ├──  project_header.h (includes libft.h)
+│     └── ...
 │ 
-├── src/  
-│   ├── project_source_1.c
-│   └── ...
+├──── src/  
+│     ├── project_source_1.c
+│     └── ...
 │ 
-├── .../
+├──── .../
 │ 
-└── Makefile
+└──── Makefile
 ```
 The libft Makefile generates object files and the 'libft.a' in the same folder. It also implements a progress bar during compilation and tracks dependencies to ensure that recompilation occurs only when source files or the header file are changed.
 
