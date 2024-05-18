@@ -56,7 +56,7 @@ Adding new functions to libft is an efficient way to save time, minimize redunda
 
 Et voilà! After following these steps, a freshly compiled libft.a will now incorporate the newly added functions.
 
-## Using Libft (General Info)
+## Using Libft
 To use libft functions in other projects, follow these steps:
 - **Ensure Accessibility:** Make sure libft.h and libft.a are accessible from your project. You can achieve this by copying these files into your project's directory.
 - **Include Header File:** To utilize libft functions in your source code, add `#include "libft.h"` at the beginning of your source files, or more elegantly, to the project's header file.
