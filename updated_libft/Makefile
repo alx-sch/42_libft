@@ -78,7 +78,7 @@ SRC_NUM :=		0
 # Define ANSI escape codes for colors and styles
 RESET =		\033[0m
 BOLD =		\033[1m
-RED =		\033[31;2m
+RED =		\033[91m
 GREEN =		\033[32m
 YELLOW =	\033[33m
 
