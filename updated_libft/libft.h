@@ -13,8 +13,8 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdlib.h> // malloc()
-# include <unistd.h> // read()
+# include <stdlib.h> // malloc, free, exit
+# include <unistd.h> // read, fork, pipe, execve, macros 'STDERR_FILENO' etc.
 # include <stddef.h> // size_t
 # include <stdint.h> // SIZE_MAX
 # include <stdarg.h> // variadic fcts
