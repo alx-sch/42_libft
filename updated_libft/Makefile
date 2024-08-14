@@ -109,12 +109,12 @@ $(NAME):	$(OBJS)
 # Target 'clean' removes object files.
 clean:
 	@rm -rf obj
-	@echo "$(BOLD)$(RED)Object files cleaned.$(RESET)"
+	@echo "$(BOLD)$(RED)libft object files removed.$(RESET)"
 
 # Target 'fclean' depends on 'clean' and removes the library as well.
 fclean:	clean
 	@rm -f $(NAME)
-	@echo "$(BOLD)$(RED)Libft library removed.$(RESET)"
+	@echo "$(BOLD)$(RED)libft library removed.$(RESET)"
 	@$(eval SRC_NUM := 0)
 
 # Target 're' depends on 'fclean' and 'all', rebuilding the project from scratch.
