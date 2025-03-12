@@ -99,4 +99,4 @@ For a practical demonstration, feel free to refer to my [fdf project](https://gi
 
 ## Acknowledgement
 - The function descriptions are mostly based on those found in [this Gitbook](https://42-cursus.gitbook.io/guide/rank-00/libft) by [Laura](https://github.com/TheBrisly) and [Simon](https://github.com/Laendrun).
-- The project badge used is retrieved from [this repo](https://github.com/ayogun/42-project-badges) by Ali Ogun.
+- The project badge is from [this repository](https://github.com/ayogun/42-project-badges) by Ali Ogun.
